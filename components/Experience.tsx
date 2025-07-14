@@ -25,8 +25,8 @@ const experiences = [
 
 export const ExperienceSection = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-20 px-4">
-      <h2 className="text-4xl font-bold mb-12 text-center">Experiencia</h2>
+    <section className="rounded-4xl py-12 pt-16 md:mt-40 mt-30 h-auto flex flex-col items-center bg-gray-800 px-4">
+      <h2 className="text-4xl font-normal md:text-5xl mb-12 text-center text-white">Experiencia</h2>
 
       <div className="space-y-16 w-full max-w-3xl">
         {experiences.map((exp, index) => (
@@ -62,14 +62,13 @@ const variants = {
   },
 }
 
-
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="bg-white shadow-md p-6 rounded-xl text-center"
+      className="bg-gray-600 shadow-md p-6 rounded-xl text-center"
     >
       <h3 className="text-xl font-semibold">{exp.title}</h3>
       <p className="text-sm text-gray-500">{exp.company} · {exp.date}</p>
