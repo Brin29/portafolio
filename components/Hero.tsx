@@ -14,29 +14,31 @@ export const Hero = () => {
         />
       </div>
       <div className="w-4/5 h-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-around gap-10">
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <ThreeDCardDemo />
         </div>
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-purple-dark text-purple-semi-clean text-3xl sm:text-4xl md:text-5xl font-light mb-6">
-            Hi, I'm <span> Breiner</span>
-            <p className="text-white font-normal">
-              Full-Stack Developer{" "}
-              <span className="hand animate-bounce">👋🏽</span>
+        <div className="md:mt-20 mt-10 w-full lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-white text-4xl font-light md:text-5xl mb-6">
+            Hola, soy <span> Breiner</span>
+            <p className=" font-normal">
+              <span className="text-blue-400">Desarrollador </span>
+              <span className="text-blue-400">Front </span>
+              <span className="text-blue-400">End </span>
+              <span className="hand animate-bounce"> 👋🏽</span>
             </p>
           </h1>
 
-          <p className="text-white w-full mb-7 font-extralight">
-            A passionate about technology and software development, with
-            experience building web applications using Spring Boot and Angular.
-            Skilled in developing REST APIs, integrating SQL databases, and
-            implementing secure authentication and authorization with JWT and
-            OAuth2.
+          <p className="text-white w-full mb-7 font-extralight md:text-xl text-lg">
+            Un apasionado del mundo del software y la tecnologia, con dos
+            solidos años de experiencia en el desarrollo con React, experto en
+            crear codigo escalable y bien estructurado, procurando utilizar
+            buenas practicas y documentación clara. Comprometido con la calidad
+            y la mejora continua en cada proyecto que emprendo.
           </p>
 
           <div className="flex w-full gap-3 justify-center lg:justify-start">
-            <button className="bg-green px-10 font-extralight text-lg p-2 rounded-4xl ">
-              Available for work
+            <button className="bg-green-500 px-10 font-semibold text-lg p-2 rounded-4xl ">
+              Disponible para trabajar
             </button>
           </div>
 
