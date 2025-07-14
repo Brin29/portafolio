@@ -19,6 +19,7 @@ export const navItems = [
 
 export const experience = [
   {
+    id: 1,
     date: "2025 - actualidad",
     position: "Desarrollador Full stack",
     description: {
@@ -27,37 +28,63 @@ export const experience = [
 
       projects: [
         {
-          Contaflow:
+          name: "Contaflow",
+          description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          technologies: [
+            { name: "Djago", icon: "django" },
+            { name: "Vue JS", icon: "vue" },
+            { name: "N8n", icon: "n8n" },
+            { name: "MySQL", icon: "mySQL" },
+            { name: "Tailwind CSS", icon: "tailwind" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+            { name: "Postman", icon: "postman" },
+          ],
         },
         {
-          Agrobot:
+          name: "Agrobot IA",
+          description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          technologies: [
+            { name: "Python", icon: "python" },
+            { name: "Roboflow", icon: "roboflow" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+          ],
         },
         {
-          SiprotIA:
+          name: "Siprot IA (Desarrollo)",
+          description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          technologies: [
+            { name: "FatApi", icon: "fastApi" },
+            { name: "React JS", icon: "react" },
+            { name: "PostgreSQL", icon: "postgre" },
+            { name: "Tailwind CSS", icon: "tailwind" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+            { name: "Postman", icon: "postman" },
+          ],
         },
         {
-          Pets_Flyer:
+          name: "Pets FLyer",
+          description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          technologies: [
+            { name: "Solana", icon: "solana" },
+            { name: "React", icon: "react" },
+            { name: "Tailwind CSS", icon: "tailwind" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+            { name: "Postman", icon: "postman" },
+          ],
         },
       ],
     },
-    technologies: [
-      { name: "Djago", icon: "django" },
-      { name: "Vue JS", icon: "vue" },
-      { name: "N8n", icon: "n8n" },
-      { name: "MySQL", icon: "mySQL" },
-      { name: "Solana", icon: "solana" },
-      { name: "Python", icon: "python" },
-      { name: "FatApi", icon: "fastApi" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "Solana", icon: "solana" },
-      { name: "Tensorflow", icon: "tensorflow" },
-    ],
   },
   {
+    id: 2,
     date: "2024 - 2025",
     position: "Desarrollador Freelancer Full stack",
     description: {
@@ -66,22 +93,52 @@ export const experience = [
 
       projects: [
         {
-          Rame: "Desarrolle e implemente una tienda virtual de venta de ropa, para un emprendimiento internacional",
-
-          Inventario:
+          name: "Rame",
+          description:
+            "Desarrolle e implemente una tienda virtual de venta de ropa, para un emprendimiento internacional",
+          technologies: [
+            { name: "Spring Boot", icon: "spring boot" },
+            { name: "React JS", icon: "react" },
+            { name: "Tailwind CSS", icon: "tailwind css" },
+            { name: "MySQL", icon: "mysql" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+            { name: "Postman", icon: "postman" },
+          ],
+        },
+        {
+          name: "Inventario (Desarrollo)",
+          description:
             "Desarrolle un inventario para un local de venta de productos de maquillaje",
+          technologies: [
+            { name: "Spring Boot", icon: "spring boot" },
+            { name: "React JS", icon: "react" },
+            { name: "Tailwind CSS", icon: "tailwind css" },
+            { name: "MySQL", icon: "mysql" },
+            { name: "Git", icon: "git" },
+            { name: "Github", icon: "github" },
+            { name: "Postman", icon: "postman" },
+          ],
         },
       ],
     },
-    technologies: [
-      { name: "JAVA", icon: "java" },
-      { name: "Spring Boot", icon: "spring boot" },
-      { name: "React JS", icon: "react" },
-      { name: "Tailwind CSS", icon: "tailwind css" },
-      { name: "MySQL", icon: "mysql" },
-    ],
   },
 ];
+
+export const experiences = [
+  { 
+    date: "2025 - Actualidad",
+    title: 'Tecnoparque - FullStack',
+    content: 'dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd sasda dadada',
+    src: ""
+  },
+  {
+    date: "2025 - 2024",
+    title: "Freelancer - FullSatck",
+    content: 'dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd',
+    src: ""
+  }
+]
 
 export const projects = [
   {
@@ -116,7 +173,7 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
   },
-]
+];
 
 /* export const projects = [
   {

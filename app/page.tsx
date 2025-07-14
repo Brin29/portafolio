@@ -2,6 +2,8 @@ import { Contact } from "@/components/Contact";
 import { ExperienceSection } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
+import { Timeline } from "@/components/ui/timeline";
+import { experiences } from "@/data";
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
         <Hero/>
         <ExperienceSection/>
         <Projects/>
+        <Timeline data={experiences}/>
         <Contact/>
       </div>
     </main>
