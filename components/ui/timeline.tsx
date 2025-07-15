@@ -1,19 +1,21 @@
 "use client";
 
+import { experience } from "@/data";
+import { useAnimation } from "framer-motion";
+import { div } from "motion/react-client";
+import { useInView } from "react-intersection-observer";
 import {
+  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
-} from "framer-motion";
+} from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
-  title: string;
-  subtitle?: string;
-  label: "Proyecto" | "Educación";
   date: string;
-  content: React.ReactNode;
-  color: string; // color del punto: ejemplo '#22c55e' (verde), '#3b82f6' (azul)
+  position: string;
+  description: Object;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -37,69 +39,85 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full bg-white" ref={containerRef}>
-      <div ref={ref} className="relative max-w-7xl mx-auto py-10 px-4 md:px-8">
+    <div
+      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      ref={containerRef}
+    >
+
+      <div ref={ref} className="h-[100vh] relative max-w-7xl mx-auto pb-20">
+
+      <div>
+        {experience.map((exp, index) => (
+          <ExperienceCard
+            key={exp.id}
+            exp={exp}
+            direction={index % 2 === 0 ? "left" : "right"}
+          />
+        ))}
+      </div>
+
         <div
-          className="absolute left-1/2 transform -translate-x-1/2 top-0 w-[2px] bg-neutral-200"
-          style={{ height }}
+          style={{
+            height: height + "px",
+          }}
+          className="m-auto overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute top-0 left-0 w-full bg-gradient-to-b from-[#22c55e] via-[#3b82f6] to-transparent rounded-full"
+            className=" inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
-
-        {data.map((item, index) => {
-          const isLeft = index % 2 === 0;
-          return (
-            <div
-              key={index}
-              className="relative flex flex-col md:flex-row items-center md:justify-between py-10"
-            >
-              {/* Lado izquierdo */}
-              <div className={`w-full md:w-5/12 ${isLeft ? "md:pr-8" : "md:order-2 md:pl-8"}`}>
-                <div className="bg-white rounded-xl shadow-md p-6 border border-neutral-100">
-                  <div className="mb-2 flex items-center gap-2">
-                    <span
-                      className={`text-xs font-semibold px-2 py-1 rounded-full ${
-                        item.label === "Proyecto"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-blue-100 text-blue-700"
-                      }`}
-                    >
-                      {item.label}
-                    </span>
-                    <span className="text-neutral-400 text-sm">{item.date}</span>
-                  </div>
-                  <h3 className="text-neutral-800 font-semibold text-lg">
-                    {item.title}
-                  </h3>
-                  {item.subtitle && (
-                    <p className="text-sm text-neutral-500 mb-2">
-                      {item.subtitle}
-                    </p>
-                  )}
-                  <div className="text-neutral-600 text-sm">{item.content}</div>
-                </div>
-              </div>
-
-              {/* Punto en la línea */}
-              <div className="hidden md:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                <div
-                  className="h-5 w-5 rounded-full border-4 bg-white"
-                  style={{ borderColor: item.color }}
-                />
-              </div>
-
-              {/* Espacio invisible en móvil para separar los items */}
-              <div className="md:hidden h-5" />
-            </div>
-          );
-        })}
       </div>
     </div>
+  );
+};
+
+
+const ExperienceCard = ({
+  exp,
+  direction,
+}: {
+  exp: any;
+  direction: "left" | "right";
+}) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.3 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : 100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
+  const projects = exp.description.projects;
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className="absolute bg-gray-600 shadow-md p-6 w-[50px] rounded-xl"
+    >
+    
+    </motion.div>
   );
 };
