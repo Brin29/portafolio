@@ -44,15 +44,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div ref={ref} className="h-[100vh] relative max-w-7xl mx-auto pb-20">
-        <div className="w-[100%] pt-20 sticky flex flex-col justify-around md:flex-row z-40 items-center top-40 self-start">
-
+        <div className="w-[100%] sticky flex flex-col md:flex-row z-40 items-center gap-20 top-40 self-start">
           <div>
             <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%]  flex items-center justify-center">
               <div className="h-4 w-4 rounded-full bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] border border-blue-500 p-2" />
             </div>
-            <h3 className="hidden md:block text-xl md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
-              Hola Mundo
-            </h3>
           </div>
 
           <div>
@@ -124,12 +120,34 @@ const ExperienceCard = ({
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="bg-gray-600 shadow-md p-6 w-[400px] rounded-xl"
+      className="bg-gray-600 shadow-md mt-12 p-6 w-[100%] rounded-xl"
     >
       <div>
         <h3>{exp.date}</h3>
         <h4>{exp.position}</h4>
         <p>{exp.description.details}</p>
+
+        <div>
+          {exp.description.projects.map((content, index) => (
+            <div>
+              <h4 key={index}>{content.name}</h4>
+              <p>{content.description}</p>
+              <div className="mt-4 flex items-center">
+                {content.technologies.map((icon, index) => (
+                  <div
+                    key={index}
+                    className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center transition-transform duration-300 hover:-translate-y-3"
+                    style={{
+                      transform: `translateX(-${5 * index + 2}px)`,
+                    }}
+                  >
+                    <img src={icon.name} alt="icon5" className="p-2" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
