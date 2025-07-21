@@ -40,13 +40,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="flex w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
+      <div ref={ref} className="h-[100vh] w-full relative max-w-7xl mx-auto pb-20">
+        <div>
+          <ExperienceCard exp={"Hello World"} direction="left" />
+        </div>
 
-      <div ref={ref} className="h-[100vh] relative max-w-7xl mx-auto pb-20">
-
-      <div>
+        <div>
+          <ExperienceCard2 exp={"Hello World"} direction="right" />
+        </div>
+        {/*
+        <div>
         {experience.map((exp, index) => (
           <ExperienceCard
             key={exp.id}
@@ -55,6 +61,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           />
         ))}
       </div>
+      */}
 
         <div
           style={{
@@ -74,7 +81,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     </div>
   );
 };
-
 
 const ExperienceCard = ({
   exp,
@@ -107,7 +113,49 @@ const ExperienceCard = ({
     },
   };
 
-  const projects = exp.description.projects;
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className="w-[45%] top-10 right-6 absolute bg-gray-600 shadow-md p-6 rounded-xl"
+    >
+      <h1>Hola Mundo</h1>
+    </motion.div>
+  );
+};
+
+const ExperienceCard2 = ({
+  exp,
+  direction,
+}: {
+  exp: any;
+  direction: "left" | "right";
+}) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.3 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? -100 : 100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -115,9 +163,7 @@ const ExperienceCard = ({
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="absolute bg-gray-600 shadow-md p-6 w-[50px] rounded-xl"
-    >
-    
-    </motion.div>
+      className="w-[45%] top-80 left-6 absolute bg-gray-600 shadow-md p-6 rounded-xl"
+    ></motion.div>
   );
 };
