@@ -1,5 +1,6 @@
 "use client";
 
+import { experience } from "@/data";
 import { useAnimation, AnimatePresence, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useScroll, useTransform } from "motion/react";
@@ -50,19 +51,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         className="h-[100vh] w-full relative max-w-7xl mx-auto pb-20"
       >
         <div>
-          <ExperienceCard exp={"Hello World"} direction="left" />
+          {experience.map((exp, index) => (
+            <ExperienceCard
+              key={exp.id}
+              exp={exp}
+              direction={index % 2 === 0 ? "left" : "right"}
+            />
+          ))}
         </div>
-        {/*
-        <div>
-        {experience.map((exp, index) => (
-          <ExperienceCard
-            key={exp.id}
-            exp={exp}
-            direction={index % 2 === 0 ? "left" : "right"}
-          />
-        ))}
-      </div>
-      */}
 
         <div
           style={{
@@ -157,6 +153,8 @@ const ExperienceCard = ({
     expanded: { rotate: 180 },
   };
 
+  const projects = exp.description.projects;
+
   return (
     <motion.div
       variants={variants}
@@ -168,7 +166,7 @@ const ExperienceCard = ({
       <motion.div
         variants={cardVariants}
         animate={isExpanded ? "expanded" : "collapsed"}
-        className="w-full max-w-md mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow duration-300"
+        className="mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow duration-300"
       >
         {/* Header - Always visible */}
         <div
@@ -187,16 +185,16 @@ const ExperienceCard = ({
                 <p className="text-lg font-semibold text-blue-600 mb-2">
                   Tecnoparque
                 </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
-                <div className="flex items-center space-x-1">
-                  <Calendar className="w-4 h-4" />
-                  <span>2024</span>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500">
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>2025</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <MapPin className="w-4 h-4" />
+                    <span>Bucaramanga, Colombia</span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-1">
-                  <MapPin className="w-4 h-4" />
-                  <span>Colombia</span>
-                </div>
-              </div>
               </div>
             </div>
             <motion.div
@@ -225,63 +223,58 @@ const ExperienceCard = ({
 
                 {/* Content */}
                 <div className="space-y-4">
-                  <p className="text-slate-600 leading-relaxed">
-                    Este es un proyecto innovador que combina tecnología moderna
-                    con diseño elegante. Desarrollado con las mejores prácticas
-                    y herramientas de vanguardia.
-                  </p>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="flex items-center space-x-2 text-sm text-slate-600">
-                      <Calendar className="w-4 h-4 text-blue-500" />
-                      <span>Enero 2024</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-slate-600">
-                      <Users className="w-4 h-4 text-green-500" />
-                      <span>5 colaboradores</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-slate-600">
-                      <MapPin className="w-4 h-4 text-red-500" />
-                      <span>Madrid, España</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm text-slate-600">
-                      <Star className="w-4 h-4 text-yellow-500" />
-                      <span>4.9/5 rating</span>
-                    </div>
-                  </div>
-
-                  {/* Technologies */}
                   <div>
-                    <h3 className="text-sm font-semibold text-slate-700 mb-2">
-                      Tecnologías utilizadas:
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "React",
-                        "TypeScript",
-                        "Tailwind CSS",
-                        "Framer Motion",
-                      ].map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <h4 className="text-sm font-semibold text-slate-700 mb-2 uppercase tracking-wide">
+                      Descripción
+                    </h4>
+                    <p className="text-slate-600 leading-relaxed">
+                      Mi rol fue analizar y desarrollar e implementar soluciones
+                      web, participando activamente en todas las etapas del
+                      ciclo de desarrollo, desde el levantamiento de
+                      requerimientos hasta la entrega final.
+                    </p>
                   </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex space-x-3 pt-2">
-                    <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-6 rounded-xl font-medium text-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
-                      <ExternalLink className="w-4 h-4" />
-                      <span>Ver Proyecto</span>
-                    </button>
-                    <button className="flex-1 border border-slate-300 text-slate-700 py-2 px-4 rounded-lg font-medium text-sm hover:bg-slate-50 transition-colors duration-200">
-                      Contactar
-                    </button>
+                  <h4 className="text-sm font-semibold text-slate-700 mb-2 uppercase tracking-wide">
+                    Proyectos
+                  </h4>
+                  <div>
+                    {projects.map((content, index) => (
+                      <div className="flex flex-col space-x-3">
+                        <div className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <p
+                            className="text-slate-600 leading-relaxed text-sm"
+                            key={index}
+                          >
+                            <span className="text-black">{content.name}: </span>{" "}
+                            {content.description}
+                          </p>
+                        </div>
+                        <div className="flex ml-6 mt-3">
+                          {content.technologies.map((icon, index) => (
+                            <div
+                              key={index}
+                              className="border border-white/[.2] rounded-full bg-black lg:w-8 lg:h-8 w-6 h-6 flex justify-center items-center transition-transform duration-300 hover:-translate-y-3"
+                              style={{
+                                transform: `translateX(-${5 * index + 2}px)`,
+                              }}
+                            >
+                              <img
+                                src={icon.name}
+                                alt="icon5"
+                                className="p-2"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex space-x-3 py-2">
+                        <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 px-6 rounded-xl font-medium text-sm hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+                          <ExternalLink className="w-4 h-4" />
+                          <span>Ver Proyecto</span>
+                        </button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

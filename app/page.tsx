@@ -12,7 +12,7 @@ export default function Home() {
         <Hero/>
         <ExperienceSection/>
         <Projects/>
-        <Timeline data={experiences}/>
+        <Timeline/>
         <Contact/>
       </div>
     </main>
