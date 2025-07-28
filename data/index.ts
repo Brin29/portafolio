@@ -25,12 +25,16 @@ export const experience = [
     description: {
       details:
         "En tecnoparque me encargue de liderar y desarrollar una gran variedad de proyectos para distintos clientes, me encarga de la comunicación y el desarrollo del proyecto",
-
       projects: [
         {
           name: "Contaflow",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          description: [
+            "Gestione el desarrollo completo desde cero de la aplicación web con Vue, Django y MySQL encargandome del diseño de la arquitectura, el desarrollo de las API's haciendolas seguras con JWT",
+
+            "Colabore con el equipo de diseño de la UI/UX para garantizar una experiencia optima",
+
+            "Cree e integre con el back end, flujos por medio de el automatizador de n8n integrandolo a su vez con gemini"
+          ],
           technologies: [
             { name: "Djago", icon: "django" },
             { name: "Vue JS", icon: "vue" },
@@ -38,29 +42,20 @@ export const experience = [
             { name: "MySQL", icon: "mySQL" },
             { name: "Tailwind CSS", icon: "tailwind" },
             { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
-            { name: "Postman", icon: "postman" },
-          ],
-        },
-        {
-          name: "Agrobot IA",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-          technologies: [
-            { name: "Python", icon: "python" },
-            { name: "Roboflow", icon: "roboflow" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
+            { name: "Github", icon: "github" }
           ],
         },
         {
           name: "Siprot IA (Desarrollo)",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          description: [
+            "Desarrolle el modelo LSTM para realizar predicciones multivariadas con sklearn de python",
+            "Lidere el desarrollo del frontend y backend utilizando Vue y FastAPI, asegurando una interfaz intuitiva, eficiente y una buena estructuracion de las API's y de la seguridad con JWT",
+            "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro"
+          ],
           technologies: [
             { name: "FatApi", icon: "fastApi" },
-            { name: "React JS", icon: "react" },
-            { name: "PostgreSQL", icon: "postgre" },
+            { name: "Vue", icon: "vue" },
+            { name: "PostgreSQL", icon: "postgres" },
             { name: "Tailwind CSS", icon: "tailwind" },
             { name: "Git", icon: "git" },
             { name: "Github", icon: "github" },
@@ -69,8 +64,11 @@ export const experience = [
         },
         {
           name: "Pets FLyer",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          description:[
+            "Gestione el desarrollo completo del blockchain con solana para crear contratos inteligentes para la autenticidad de documentos",
+            "Integre la conexión del blockchain con la interfaz de frontend utilizando buenas practicas",
+            "Documente cada fase de desarrollo del blockchain, para mantenimientos futuros del proyecto"
+          ],
           technologies: [
             { name: "Solana", icon: "solana" },
             { name: "React", icon: "react" },
@@ -83,7 +81,10 @@ export const experience = [
       ],
     },
   },
-  {
+];
+
+export const experienceFreelancer = [
+    {
     id: 2,
     date: "2024 - 2025",
     position: "Desarrollador Freelancer Full stack",
@@ -123,7 +124,7 @@ export const experience = [
       ],
     },
   },
-];
+]
 
 export const experiences = [
   { 
