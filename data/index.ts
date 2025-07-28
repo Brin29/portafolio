@@ -95,8 +95,7 @@ export const experienceFreelancer = [
       projects: [
         {
           name: "Rame",
-          description:
-            "Desarrolle e implemente una tienda virtual de venta de ropa, para un emprendimiento internacional",
+          description: ["", ""],
           technologies: [
             { name: "Spring Boot", icon: "spring boot" },
             { name: "React JS", icon: "react" },
@@ -109,8 +108,7 @@ export const experienceFreelancer = [
         },
         {
           name: "Inventario (Desarrollo)",
-          description:
-            "Desarrolle un inventario para un local de venta de productos de maquillaje",
+          description: ["", ""],
           technologies: [
             { name: "Spring Boot", icon: "spring boot" },
             { name: "React JS", icon: "react" },
