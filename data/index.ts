@@ -11,8 +11,8 @@ import {
   n8n,
   springboot,
   tailwind,
-  vue
-} from "../assets"
+  vue,
+} from "../assets";
 
 export const navItems = [
   {
@@ -36,7 +36,7 @@ export const navItems = [
 export const experience = [
   {
     id: 1,
-    date: "2025 - actualidad",
+    date: "2025",
     position: "Desarrollador Full stack",
     description: {
       details:
@@ -49,8 +49,10 @@ export const experience = [
 
             "Colabore con el equipo de diseño de la UI/UX para garantizar una experiencia optima",
 
-            "Cree e integre con el back end, flujos por medio de el automatizador de n8n integrandolo a su vez con gemini"
+            "Cree e integre con el back end, flujos por medio de el automatizador de n8n integrandolo a su vez con gemini",
           ],
+          hadWebSite: true,
+          webSite: "https://contaflow.nativoweb.com/login",
           technologies: [
             { name: "Django", icon: django.src },
             { name: "Vue JS", icon: vue.src },
@@ -58,7 +60,8 @@ export const experience = [
             { name: "MySQL", icon: mysql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "Git", icon: git.src },
-            { name: "Github", icon: github.src }
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src }
           ],
         },
         {
@@ -66,11 +69,12 @@ export const experience = [
           description: [
             "Desarrolle el modelo LSTM para realizar predicciones multivariadas con sklearn de python",
             "Lidere el desarrollo del frontend y backend utilizando Vue y FastAPI, asegurando una interfaz intuitiva, eficiente y una buena estructuracion de las API's y de la seguridad con JWT",
-            "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro"
+            "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro",
           ],
+          hadWebSite: false,
           technologies: [
-            { name: "FatApi", icon: fastapi.src },
-            { name: "Vue", icon: vue.src },
+            { name: "FastApi", icon: fastapi.src },
+            { name: "Vue JS", icon: vue.src },
             { name: "PostgreSQL", icon: postgresql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "Git", icon: git.src },
@@ -80,11 +84,13 @@ export const experience = [
         },
         {
           name: "Pets FLyer",
-          description:[
+          description: [
             "Gestione el desarrollo completo del blockchain con solana para crear contratos inteligentes para la autenticidad de documentos",
             "Integre la conexión del blockchain con la interfaz de frontend utilizando buenas practicas",
-            "Documente cada fase de desarrollo del blockchain, para mantenimientos futuros del proyecto"
+            "Documente cada fase de desarrollo del blockchain, para mantenimientos futuros del proyecto",
           ],
+          hadWebSite: true,
+          webSite: "https://petsflyer.com/",
           technologies: [
             { name: "Solana", icon: solana.src },
             { name: "React", icon: react.src },
@@ -100,7 +106,7 @@ export const experience = [
 ];
 
 export const experienceFreelancer = [
-    {
+  {
     id: 2,
     date: "2024 - 2025",
     position: "Desarrollador Freelancer Full stack",
@@ -112,10 +118,11 @@ export const experienceFreelancer = [
         {
           name: "Rame",
           description: [
-            "Lidere y colabore con el desarrollo completo desde cero de la aplicación web con React, Spring Boot y MySQL", 
+            "Lidere y colabore con el desarrollo completo desde cero de la aplicación web con React, Spring Boot y MySQL",
             "Diseñe la interfaz de principio a fin de la UI/UX",
             "Integre diferentes herramientas y API's externas como mercado pago para el manejo de pasarelas de pago",
-            "Desplegue la aplicación web con vercel"],
+            "Desplegue la aplicación web con vercel",
+          ],
           technologies: [
             { name: "Spring Boot", icon: springboot.src },
             { name: "React JS", icon: react.src },
@@ -130,9 +137,10 @@ export const experienceFreelancer = [
           name: "Inventario (Desarrollo)",
           description: [
             "Desarrolle de principio a fin toda la interfaz con Vue y Django",
-            "Me encargue de la creación de las API's y el manejo de de la seguridad con JWT", 
+            "Me encargue de la creación de las API's y el manejo de de la seguridad con JWT",
             "Colabore con diseñadores para la interfaz del frontend",
-            "Maquete la arquitectura de la aplicación"],
+            "Maquete la arquitectura de la aplicación",
+          ],
           technologies: [
             { name: "Django", icon: django.src },
             { name: "React", icon: react.src },
@@ -146,22 +154,24 @@ export const experienceFreelancer = [
       ],
     },
   },
-]
+];
 
 export const experiences = [
-  { 
+  {
     date: "2025 - Actualidad",
-    title: 'Tecnoparque - FullStack',
-    content: 'dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd sasda dadada',
-    src: ""
+    title: "Tecnoparque - FullStack",
+    content:
+      "dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd sasda dadada",
+    src: "",
   },
   {
     date: "2025 - 2024",
     title: "Freelancer - FullSatck",
-    content: 'dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd',
-    src: ""
-  }
-]
+    content:
+      "dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd",
+    src: "",
+  },
+];
 
 export const projects = [
   {
