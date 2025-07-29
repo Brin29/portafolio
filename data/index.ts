@@ -1,3 +1,19 @@
+import {
+  django,
+  fastapi,
+  git,
+  github,
+  mysql,
+  postgresql,
+  postman,
+  react,
+  solana,
+  n8n,
+  springboot,
+  tailwind,
+  vue
+} from "../assets"
+
 export const navItems = [
   {
     name: "Sobre Mi",
@@ -36,13 +52,13 @@ export const experience = [
             "Cree e integre con el back end, flujos por medio de el automatizador de n8n integrandolo a su vez con gemini"
           ],
           technologies: [
-            { name: "Djago", icon: "django" },
-            { name: "Vue JS", icon: "vue" },
-            { name: "N8n", icon: "n8n" },
-            { name: "MySQL", icon: "mySQL" },
-            { name: "Tailwind CSS", icon: "tailwind" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" }
+            { name: "Django", icon: django.src },
+            { name: "Vue JS", icon: vue.src },
+            { name: "N8n", icon: n8n.src },
+            { name: "MySQL", icon: mysql.src },
+            { name: "Tailwind CSS", icon: tailwind.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src }
           ],
         },
         {
@@ -53,13 +69,13 @@ export const experience = [
             "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro"
           ],
           technologies: [
-            { name: "FatApi", icon: "fastApi" },
-            { name: "Vue", icon: "vue" },
-            { name: "PostgreSQL", icon: "postgres" },
-            { name: "Tailwind CSS", icon: "tailwind" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
-            { name: "Postman", icon: "postman" },
+            { name: "FatApi", icon: fastapi.src },
+            { name: "Vue", icon: vue.src },
+            { name: "PostgreSQL", icon: postgresql.src },
+            { name: "Tailwind CSS", icon: tailwind.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src },
           ],
         },
         {
@@ -70,12 +86,12 @@ export const experience = [
             "Documente cada fase de desarrollo del blockchain, para mantenimientos futuros del proyecto"
           ],
           technologies: [
-            { name: "Solana", icon: "solana" },
-            { name: "React", icon: "react" },
-            { name: "Tailwind CSS", icon: "tailwind" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
-            { name: "Postman", icon: "postman" },
+            { name: "Solana", icon: solana.src },
+            { name: "React", icon: react.src },
+            { name: "Tailwind CSS", icon: tailwind.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src },
           ],
         },
       ],
@@ -95,28 +111,36 @@ export const experienceFreelancer = [
       projects: [
         {
           name: "Rame",
-          description: ["", ""],
+          description: [
+            "Lidere y colabore con el desarrollo completo desde cero de la aplicación web con React, Spring Boot y MySQL", 
+            "Diseñe la interfaz de principio a fin de la UI/UX",
+            "Integre diferentes herramientas y API's externas como mercado pago para el manejo de pasarelas de pago",
+            "Desplegue la aplicación web con vercel"],
           technologies: [
-            { name: "Spring Boot", icon: "spring boot" },
-            { name: "React JS", icon: "react" },
-            { name: "Tailwind CSS", icon: "tailwind css" },
-            { name: "MySQL", icon: "mysql" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
-            { name: "Postman", icon: "postman" },
+            { name: "Spring Boot", icon: springboot.src },
+            { name: "React JS", icon: react.src },
+            { name: "Tailwind CSS", icon: tailwind.src },
+            { name: "MySQL", icon: mysql.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src },
           ],
         },
         {
           name: "Inventario (Desarrollo)",
-          description: ["", ""],
+          description: [
+            "Desarrolle de principio a fin toda la interfaz con Vue y Django",
+            "Me encargue de la creación de las API's y el manejo de de la seguridad con JWT", 
+            "Colabore con diseñadores para la interfaz del frontend",
+            "Maquete la arquitectura de la aplicación"],
           technologies: [
-            { name: "Spring Boot", icon: "spring boot" },
-            { name: "React JS", icon: "react" },
-            { name: "Tailwind CSS", icon: "tailwind css" },
-            { name: "MySQL", icon: "mysql" },
-            { name: "Git", icon: "git" },
-            { name: "Github", icon: "github" },
-            { name: "Postman", icon: "postman" },
+            { name: "Django", icon: django.src },
+            { name: "React", icon: react.src },
+            { name: "Tailwind CSS", icon: tailwind.src },
+            { name: "MySQL", icon: mysql.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src },
           ],
         },
       ],
@@ -173,54 +197,6 @@ export const projects = [
     link: "/ui.apple.com",
   },
 ];
-
-/* export const projects = [
-  {
-    id: 1,
-    title: "Generador de nombres con IA",
-    description:
-      "Desarrolle una aplicación web, integrandola con n8n, donde por medio de inteligencia artificial se generan nombres para mascotas, dependiendo unos datos que se ingresen",
-    image: "#",
-    technologies: [
-      { name: "Python", icons: "python" },
-      { name: "Django", icon: "django" },
-      { name: "Vue.js", icon: "vue" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "N8n", icon: "n8n" },
-    ],
-    link: "#"
-  },
-  {
-    id: 2,
-    title: "Acortador de Contraseñas",
-    description:
-      "Hice un acortador de contraseña usando Spring Boot, Docker y Redis, integrandola con la API de Bitly's, use redis para reducir y mejorar la velocidad del llamado a la API",
-    image: "#",
-    technologies: [
-      { name: "Spring Boot", icons: "spring boot" },
-      { name: "JAVA", icon: "java" },
-      { name: "Angular", icon: "angular" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-      { name: "Docker", icon: "docker" },
-      { name: "Redis", icon: "redis" },
-    ],
-    link: "#"
-  },
-  {
-    id: 3,
-    title: "Chat con WebSocket",
-    description:
-      "Desarrolle una aplicacion implementando web socket, para un manejo de mensajes en tiempo real",
-    image: "#",
-    technologies: [
-      { name: "Spring Boot", icons: "spring boot" },
-      { name: "JAVA", icon: "java" },
-      { name: "Angular", icon: "angular" },
-      { name: "Tailwind CSS", icon: "tailwind" },
-    ],
-    link: "#"
-  },
-]; */
 
 export const technologies = [
   { name: "Spring Boot", icons: "spring boot" },

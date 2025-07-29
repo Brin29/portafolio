@@ -206,20 +206,20 @@ const ExperienceCardFreelancer = ({
                           <div className="ml-4 md:ml-5">
                             <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
                               <span className="text-xs text-slate-500 font-medium flex-shrink-0">Tecnologías:</span>
-                              <div className="flex flex-wrap gap-1 sm:gap-0 sm:-space-x-1">
+                              <div className="flex flex-wrap gap-1 sm:gap-3 sm:-space-x-1">
                                 {project.technologies.map((tech, techIndex) => (
                                   <div
                                     key={techIndex}
-                                    className="border border-white/20 rounded-full bg-slate-900 w-6 h-6 md:w-7 md:h-7 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10"
+                                    className="border border-white/20 rounded-full w-7 h-7 md:w-8 md:h-8 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10"
                                     style={{
                                       transform: window?.innerWidth >= 640 ? `translateX(-${2 * techIndex}px)` : "none",
                                     }}
                                     title={tech.name}
                                   >
                                     <img
-                                      src={`/placeholder.svg?height=16&width=16&text=${tech.icon}`}
+                                      src={tech.icon}
                                       alt={tech.name}
-                                      className="w-3 h-3 md:w-4 md:h-4 object-contain"
+                                      className="w-5 h-5 md:w-6 md:h-6 object-contain"
                                     />
                                   </div>
                                 ))}
