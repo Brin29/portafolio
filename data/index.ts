@@ -86,7 +86,7 @@ export const experience = [
           ],
         },
         {
-          name: "Pets FLyer",
+          name: "Pets FLyer (Desarrollo)",
           description: [
             "Gestione el desarrollo completo del blockchain con solana para crear contratos inteligentes para la autenticidad de documentos",
             "Integre la conexión del blockchain con la interfaz de frontend utilizando buenas practicas",
