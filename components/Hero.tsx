@@ -17,7 +17,7 @@ export const Hero = () => {
         <div className="flex justify-center">
           <ThreeDCardDemo />
         </div>
-        <div className="md:mt-20 w-full lg:w-1/2 text-center lg:text-left">
+        <div className="md:mt-20 mt-40 w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-white text-4xl font-light md:text-5xl mb-6">
             Hola, soy <span> Breiner</span>
             <p className=" font-normal">

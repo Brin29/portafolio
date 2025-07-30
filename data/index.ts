@@ -109,7 +109,7 @@ export const experienceFreelancer = [
   {
     id: 2,
     date: "2024 - 2025",
-    position: "Desarrollador Freelancer Full stack",
+    position: "Desarrollador Freelancer",
     description: {
       details:
         "En mi paso como freelancer desarrolle y implemente dos proyectos para distintos clientes nacionales y internacionales",
