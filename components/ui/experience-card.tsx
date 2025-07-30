@@ -9,7 +9,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import { div } from "motion/react-client";
 
 interface Project {
   name: string;

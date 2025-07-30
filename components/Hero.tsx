@@ -4,7 +4,7 @@ import { ThreeDCardDemo } from "./ui/three-d-card-demo";
 export const Hero = () => {
   return (
     <section
-      className="flex justify-center items-center w-full h-[100vh]"
+      className="flex justify-center items-center w-full md:h-[100vh] h-[110vh]"
       id="dashboard"
     >
       <div>
@@ -20,7 +20,7 @@ export const Hero = () => {
         <div className="md:mt-20 mt-40 w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-white text-4xl font-light md:text-5xl mb-6">
             Hola, soy <span> Breiner</span>
-            <p className=" font-normal">
+            <p className="font-normal">
               <span className="text-blue-400">Desarrollador </span>
               <span className="text-blue-400">Front </span>
               <span className="text-blue-400">End </span>

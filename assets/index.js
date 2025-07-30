@@ -10,6 +10,9 @@ import solana from "./solana.png";
 import n8n from "./n8n.png";
 import springboot from "./springboot.svg";
 import tailwind from "./tailwind.svg";
-import vue from "./vue.svg"
+import vue from "./vue.svg";
+import petsName from "./projects/pets_name.png";
+import urlShorten from "./projects/urlShorten.webp";
+import webSocket from "./projects/webSocket.webp"; 
 
-export { django, fastapi, git, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue };
+export { django, fastapi, git, petsName, urlShorten, webSocket, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue };

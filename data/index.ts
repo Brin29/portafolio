@@ -12,6 +12,9 @@ import {
   springboot,
   tailwind,
   vue,
+  webSocket,
+  petsName,
+  urlShorten
 } from "../assets";
 
 export const navItems = [
@@ -176,15 +179,15 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    title: "Generador de Nombres para mascotas",
+    des: "Desarrollé una aplicación que utiliza flujos automatizados en n8n integrados con el modelo de inteligencia artificial Gemini para generar nombres únicos y creativos para mascotas. El sistema permite al usuario ingresar características de la mascota (como tipo, personalidad o tamaño), y en respuesta obtiene sugerencias personalizadas generadas por IA.",
+    img: petsName.src,
+    iconLists: [vue.src, n8n.src, django.src, mysql.src, git.src, github.src, postman.src],
     link: "/ui.earth.com",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
+    title: "Detector de caminos",
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],

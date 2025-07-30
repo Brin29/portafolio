@@ -1,17 +1,24 @@
-projects
+projects;
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 
 export const Projects = () => {
   return (
     <div id="projects" className="py-20">
-      <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
-      </h1>
+      <h2 className="text-center text-white text-4xl font-light md:text-5xl mb-6">
+        Mis mejores{" "}
+        <span className="text-blue-400 font-normal">Proyectos personales</span>
+      </h2>
+      <p className="m-auto text-center text-white w-[70%] font-extralight md:text-xl text-lg">
+        Explora la sección de mis proyectos personales, donde he aplicado mis
+        conocimientos en desarrollo web, backend y nuevas
+        tecnologías. Cada proyecto representa un reto resuelto con código
+        limpio, escalable y funcional, reflejando mi evolución como
+        desarrollador y mi pasión por crear soluciones innovadoras.
+      </p>
       <div
         className="flex flex-wrap items-center
-      justify-center p-4 gap-40 mt-10"
+      justify-center p-4 gap-40"
       >
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
