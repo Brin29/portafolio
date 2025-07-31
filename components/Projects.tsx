@@ -17,8 +17,8 @@ export const Projects = () => {
         desarrollador y mi pasión por crear soluciones innovadoras.
       </p>
       <div
-        className="flex flex-wrap items-center
-      justify-center p-4 gap-40"
+        className="flex flex-wrap
+      justify-center p-4 gap-20 mt-10"
       >
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
@@ -26,7 +26,7 @@ export const Projects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
             <PinContainer title={title} href={link}>
-              <div className="relative gap-2 flex items-center flex-col justify-center sm:w-96 w-[80vw] overflow-hidden mb-10">
+              <div className="gap-2 flex items-center flex-col justify-center sm:w-96 w-[80vw] overflow-hidden mb-10">
                 <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
                   {title}
                 </h3>
@@ -43,7 +43,7 @@ export const Projects = () => {
                   {iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-slate-200 dark:border-neutral-600 rounded-full w-9 h-9 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10 bg-white dark:bg-neutral-800"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}

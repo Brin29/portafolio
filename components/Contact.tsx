@@ -1,123 +1,146 @@
 "use client"
+
 import type React from "react"
-import { useState } from "react"
+
+import { useState, useRef } from "react"
 import { Input, Textarea } from "./ui/input"
 import { PlanetCanva } from "./canvas/PlanetCanva"
 import { Label } from "./ui/label"
+import emailjs from "@emailjs/browser"
 import { cn } from "@/utils/cn"
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const form = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
+  const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
+  const publicKey = process.env.NEXT_PUBLIC_KEY
+
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (!form.current) return
+
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
-    const contactData = {
-      name: `${formData.get("firstname")} ${formData.get("lastname")}`,
-      email: formData.get("email"),
-      subject: formData.get("subject"),
-      message: formData.get("message"),
-    }
-
-    try {
-      // Aquí puedes integrar con tu servicio de email preferido
-      // Por ejemplo: EmailJS, Resend, o un endpoint de API
-      console.log("Contact form data:", contactData)
-
-      // Simular envío
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      setSubmitStatus("success")
-      e.currentTarget.reset()
-    } catch (error) {
-      console.error("Error sending message:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus("idle"), 3000)
-    }
+    emailjs
+      .sendForm(serviceId!, templateId!, form.current, {
+        publicKey: publicKey!,
+      })
+      .then(() => {
+        form.current?.reset()
+        setSubmitStatus("success")
+      })
+      .catch(() => {
+        form.current?.reset()
+        setSubmitStatus("error")
+      })
+      .finally(() => {
+        setIsSubmitting(false)
+        setTimeout(() => {
+          setSubmitStatus("idle")
+        }, 4000)
+      })
   }
 
   return (
-    <div className="m-auto w-[80%] min-h-screen flex flex-col md:flex-row items-center justify-center px-4 py-10">
-      <div>
-        <div className="w-full max-w-lg shadow-input bg-black text-white rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-white">Let's Work Together</h2>
-          <p className="mt-2 max-w-sm text-sm text-neutral-300">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can bring your
-            ideas to life.
-          </p>
+    <div className="min-h-scree flex items-center justify-center px-4 py-10">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Formulario */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-lg shadow-2xl bg-black border border-neutral-800 text-white rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-2">Contáctame</h2>
+              <p className="text-sm text-neutral-300 mb-6">
+                ¿Tienes una idea, proyecto o propuesta de trabajo? Estoy disponible para trabajar en nuevos desafíos.
+                Completa el formulario y me pondré en contacto contigo lo antes posible.
+              </p>
 
-          {submitStatus === "success" && (
-            <div className="mt-4 p-3 bg-green-500/20 border border-green-500/50 rounded-md">
-              <p className="text-green-400 text-sm">Message sent successfully! I'll get back to you soon.</p>
+              {submitStatus === "success" && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
+                  <p className="text-green-400 text-sm">¡Mensaje enviado con éxito! Te responderé pronto.</p>
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                  <p className="text-red-400 text-sm">Algo salió mal. Por favor, intenta de nuevo.</p>
+                </div>
+              )}
+
+              <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                <LabelInputContainer>
+                  <Label htmlFor="name" className="text-neutral-200">
+                    Nombre
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    placeholder="Tu nombre"
+                    type="text"
+                    required
+                    className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                  />
+                </LabelInputContainer>
+
+                <LabelInputContainer>
+                  <Label htmlFor="email" className="text-neutral-200">
+                    Email
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    placeholder="Tu email"
+                    type="email"
+                    required
+                    className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                  />
+                </LabelInputContainer>
+
+                <LabelInputContainer>
+                  <Label htmlFor="message" className="text-neutral-200">
+                    Mensaje
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="resize-none bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                    placeholder="Cuéntame sobre tu proyecto..."
+                  />
+                </LabelInputContainer>
+
+                <button
+                  className="group/btn relative block h-12 w-full rounded-lg bg-gradient-to-br from-neutral-900 to-neutral-700 font-medium text-white shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  <span className="relative z-10">{isSubmitting ? "Enviando..." : "Enviar mensaje"} &rarr;</span>
+                  <BottomGradient />
+                </button>
+
+                <div className="relative">
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="w-full border-t border-neutral-700" />
+                  </div>
+                </div>
+
+                <p className="text-xs text-neutral-400 text-center">
+                  Suelo responder en menos de 24 horas. ¡Estoy atento a tu mensaje!
+                </p>
+              </form>
             </div>
-          )}
+          </div>
 
-          {submitStatus === "error" && (
-            <div className="mt-4 p-3 bg-red-500/20 border border-red-500/50 rounded-md">
-              <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+          {/* Canvas del Planeta */}
+          <div className="flex justify-center lg:justify-start">
+            <div className="w-full max-w-2xl aspect-square">
+              <PlanetCanva />
             </div>
-          )}
-
-          <form className="my-8" onSubmit={handleSubmit}>
-            <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-              <LabelInputContainer>
-                <Label htmlFor="firstname">First name</Label>
-                <Input id="firstname" name="firstname" placeholder="John" type="text" required />
-              </LabelInputContainer>
-              <LabelInputContainer>
-                <Label htmlFor="lastname">Last name</Label>
-                <Input id="lastname" name="lastname" placeholder="Doe" type="text" required />
-              </LabelInputContainer>
-            </div>
-
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="email">Email Address</Label>
-              <Input id="email" name="email" placeholder="john.doe@example.com" type="email" required />
-            </LabelInputContainer>
-
-            <LabelInputContainer className="mb-4">
-              <Label htmlFor="subject">Subject</Label>
-              <Input id="subject" name="subject" placeholder="Project Collaboration" type="text" required />
-            </LabelInputContainer>
-
-            <LabelInputContainer className="mb-8">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
-                id="message"
-                name="message"
-                placeholder="Tell me about your project, timeline, and how I can help you achieve your goals..."
-                rows={5}
-                required
-                className="resize-none"
-              />
-            </LabelInputContainer>
-
-            <button
-              className="group/btn relative block h-12 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send Message"} &rarr;
-              <BottomGradient />
-            </button>
-
-            <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
-
-            <p className="text-xs text-neutral-400 text-center">
-              I typically respond within 24 hours. Looking forward to hearing from you!
-            </p>
-          </form>
+          </div>
         </div>
-      </div>
-
-      <div className="flex items-center justify-center w-[800px] h-[800px] md:block">
-        <PlanetCanva />
       </div>
     </div>
   )

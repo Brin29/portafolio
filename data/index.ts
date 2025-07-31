@@ -187,7 +187,7 @@ export const projects = [
   {
     id: 1,
     title: "Generador de Nombres para mascotas",
-    des: "Desarrollé una aplicación que utiliza flujos automatizados en n8n integrados con el modelo de inteligencia artificial Gemini para generar nombres únicos y creativos para mascotas. El sistema permite al usuario ingresar características de la mascota (como tipo, personalidad o tamaño), y en respuesta obtiene sugerencias personalizadas generadas por IA.",
+    des: "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas. El usuario ingresa características como tipo o personalidad, y recibe sugerencias personalizadas con ayuda de IA generativa.",
     img: petsName.src,
     iconLists: [vue.src, n8n.src, django.src, mysql.src, git.src, github.src, postman.src],
     link: "/ui.earth.com",
@@ -195,7 +195,7 @@ export const projects = [
   {
     id: 2,
     title: "Detector de caminos",
-    des: "Este proyecto tiene como objetivo identificar caminos de tierra en imágenes utilizando técnicas de visión computarizada apoyadas por modelos de inteligencia artificial entrenados con Roboflow.",
+    des: "Proyecto de visión computarizada que detecta caminos de tierra en imágenes mediante modelos de inteligencia artificial entrenados con Roboflow. Se utiliza procesamiento de imágenes y aprendizaje automático para mejorar la detección visual en diferentes entornos.",
     img: detector.src,
     iconLists: [python.src, matbloptlip.src, roboflow.src, ultratycs.src, colab.src, git.src, github.src],
     link: "/ui.yoom.com",
@@ -203,7 +203,7 @@ export const projects = [
   {
     id: 3,
     title: "Acortador de URL's",
-    des: "Este proyecto de acortamiento de URLs utiliza la API de Bitly junto con Spring Boot y Redis para generar enlaces cortos y almacenarlos en caché para una recuperación rápida. Al guardar las URLs acortadas en Redis, se reduce el número de llamadas a la API de Bitly, mejorando así el rendimiento y la escalabilidad de la aplicación",
+    des: "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis. Las URLs acortadas se almacenan en caché con Redis, lo cual reduce las peticiones externas y mejora el rendimiento. Permite crear y recuperar enlaces de forma rápida y eficiente.",
     img: urlShorten.src,
     iconLists: [vue.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
     link: "/ui.aiimg.com",
@@ -211,12 +211,13 @@ export const projects = [
   {
     id: 4,
     title: "Mensajes en tiempo real",
-    des: "Este proyecto de mensajería utiliza WebSockets, Spring Boot y Redis para habilitar la comunicación en tiempo real entre usuarios. Los WebSockets gestionan el intercambio de mensajes en vivo, mientras que Redis asegura la escalabilidad del sistema mediante un mecanismo de publicación y suscripción (pub/sub), permitiendo el envío y recepción de mensajes en arquitecturas distribuidas.",
+    des: "Aplicación de mensajería construida con WebSockets, Spring Boot y Redis. Permite a los usuarios comunicarse en tiempo real mediante un sistema escalable que utiliza pub/sub para manejar eventos distribuidos y mantener las conversaciones activas.",
     img: webSocket.src,
     iconLists: [vue.src, springboot.src, mysql.src, git.src, github.src],
     link: "/ui.apple.com",
   },
 ];
+
 
 export const technologies = [
   { name: "Spring Boot", icons: "spring boot" },
