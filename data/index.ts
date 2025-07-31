@@ -14,7 +14,14 @@ import {
   vue,
   webSocket,
   petsName,
-  urlShorten
+  urlShorten,
+  detector,
+  matbloptlip,
+  ultratycs,
+  python,
+  colab,
+  roboflow,
+  redis
 } from "../assets";
 
 export const navItems = [
@@ -188,25 +195,25 @@ export const projects = [
   {
     id: 2,
     title: "Detector de caminos",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    des: "Este proyecto tiene como objetivo identificar caminos de tierra en imágenes utilizando técnicas de visión computarizada apoyadas por modelos de inteligencia artificial entrenados con Roboflow.",
+    img: detector.src,
+    iconLists: [python.src, matbloptlip.src, roboflow.src, ultratycs.src, colab.src, git.src, github.src],
     link: "/ui.yoom.com",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    title: "Acortador de URL's",
+    des: "Este proyecto de acortamiento de URLs utiliza la API de Bitly junto con Spring Boot y Redis para generar enlaces cortos y almacenarlos en caché para una recuperación rápida. Al guardar las URLs acortadas en Redis, se reduce el número de llamadas a la API de Bitly, mejorando así el rendimiento y la escalabilidad de la aplicación",
+    img: urlShorten.src,
+    iconLists: [vue.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
     link: "/ui.aiimg.com",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Mensajes en tiempo real",
+    des: "Este proyecto de mensajería utiliza WebSockets, Spring Boot y Redis para habilitar la comunicación en tiempo real entre usuarios. Los WebSockets gestionan el intercambio de mensajes en vivo, mientras que Redis asegura la escalabilidad del sistema mediante un mecanismo de publicación y suscripción (pub/sub), permitiendo el envío y recepción de mensajes en arquitecturas distribuidas.",
+    img: webSocket.src,
+    iconLists: [vue.src, springboot.src, mysql.src, git.src, github.src],
     link: "/ui.apple.com",
   },
 ];
