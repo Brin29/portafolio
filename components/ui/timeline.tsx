@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="mt-40 md:mt-20">
+    <div className="pt-40 md:pt-20" id="experiencia">
       <h2 className="text-center text-white text-4xl font-light md:text-5xl mb-6">
         Mi Experiencia <span className="text-blue-400 font-normal">Profesional</span>
       </h2>

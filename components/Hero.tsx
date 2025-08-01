@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section
       className="flex justify-center items-center w-full md:h-[100vh] h-[110vh]"
-      id="dashboard"
+      id="sobre_mi"
     >
       <div>
         <Spotlight

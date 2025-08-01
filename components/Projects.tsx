@@ -4,7 +4,7 @@ import { PinContainer } from "./ui/3d-pin";
 
 export const Projects = () => {
   return (
-    <div id="projects" className="py-20">
+    <div id="proyectos" className="py-20 ">
       <h2 className="text-center text-white text-4xl font-light md:text-5xl mb-6">
         Mis mejores{" "}
         <span className="text-blue-400 font-normal">Proyectos personales</span>
@@ -17,8 +17,7 @@ export const Projects = () => {
         desarrollador y mi pasión por crear soluciones innovadoras.
       </p>
       <div
-        className="flex flex-wrap
-      justify-center p-4 gap-20 mt-10"
+        className="flex flex-wrap justify-evenly p-4 md:gap-30 gap-50 mt-24 md:mt-10"
       >
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div

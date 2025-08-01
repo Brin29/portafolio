@@ -31,15 +31,15 @@ export const navItems = [
   },
   {
     name: "Experiencia",
-    link: "experiencia",
+    link: "#experiencia",
   },
   {
     name: "Proyectos",
-    link: "proyectos",
+    link: "#proyectos",
   },
   {
-    name: "Habilidades",
-    link: "habilidades",
+    name: "Contacto",
+    link: "#contacto",
   },
 ];
 
