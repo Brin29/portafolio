@@ -30,10 +30,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="pt-40 md:pt-20" id="experiencia">
-      <h2 className="text-center text-white text-4xl font-light md:text-5xl mb-6">
+      <h2 className="text-center text-black dark:text-white text-4xl font-light md:text-5xl mb-6">
         Mi Experiencia <span className="text-blue-400 font-normal">Profesional</span>
       </h2>
-      <p className="m-auto text-center text-white w-[70%] mb-7 font-extralight md:text-xl text-lg">
+      <p className="m-auto text-center text-black dark:text-white w-[70%] mb-7 font-extralight md:text-xl text-lg">
         Un recorrido por mi trayectoria, destacando los proyectos más relevantes
         en los que he trabajado y las habilidades que he desarrollado a lo largo
         del camino.
@@ -53,12 +53,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
                   <div className="h-4 w-4 rounded-full bg-blue-400  p-2" />
                 </div>
-                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white">
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-black dark:text-white">
                   {item.title}
                 </h3>
               </div>
               <div className="relative pl-20 pr-4 md:pl-4 w-full">
-                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-800 dark:text-neutral-500">
                   {item.title}
                 </h3>
                 {item.content}

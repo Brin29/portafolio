@@ -50,9 +50,9 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Formulario */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-lg shadow-2xl bg-black border border-neutral-800 text-white rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-2">Contáctame</h2>
-              <p className="text-sm text-neutral-300 mb-6">
+            <div className="w-full max-w-lg shadow-2xl bg-white dark:bg-black border border-neutral-50 dark:border-neutral-800 text-white rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Contáctame</h2>
+              <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
                 ¿Tienes una idea, proyecto o propuesta de trabajo? Estoy disponible para trabajar en nuevos desafíos.
                 Completa el formulario y me pondré en contacto contigo lo antes posible.
               </p>
@@ -71,7 +71,7 @@ export const Contact = () => {
 
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <LabelInputContainer>
-                  <Label htmlFor="name" className="text-neutral-200">
+                  <Label htmlFor="name" className="text-neutral-800 dark:text-neutral-200">
                     Nombre
                   </Label>
                   <Input
@@ -80,12 +80,12 @@ export const Contact = () => {
                     placeholder="Tu nombre"
                     type="text"
                     required
-                    className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                    className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
                   />
                 </LabelInputContainer>
 
                 <LabelInputContainer>
-                  <Label htmlFor="email" className="text-neutral-200">
+                  <Label htmlFor="email" className="text-neutral-800 dark:text-neutral-200">
                     Email
                   </Label>
                   <Input
@@ -94,12 +94,14 @@ export const Contact = () => {
                     placeholder="Tu email"
                     type="email"
                     required
-                    className="bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                    className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white dark:placeholder:text-neutral-500
+                    placeholder:text-neutral-600 
+                    focus:border-neutral-500"
                   />
                 </LabelInputContainer>
 
                 <LabelInputContainer>
-                  <Label htmlFor="message" className="text-neutral-200">
+                  <Label htmlFor="message" className="text-neutral-800 dark:text-neutral-200">
                     Mensaje
                   </Label>
                   <Textarea
@@ -107,13 +109,13 @@ export const Contact = () => {
                     name="message"
                     rows={5}
                     required
-                    className="resize-none bg-neutral-900 border-neutral-700 text-white placeholder:text-neutral-500 focus:border-neutral-500"
+                    className="resize-none bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </LabelInputContainer>
 
                 <button
-                  className="group/btn relative block h-12 w-full rounded-lg bg-gradient-to-br from-neutral-900 to-neutral-700 font-medium text-white shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="cursor-pointer group/btn relative block h-12 w-full rounded-lg bg-gradient-to-br from-[#d5f2ff] to-[#81abde] dark:from-neutral-900 dark:to-neutral-700 font-medium dark:text-white text-black shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   type="submit"
                   disabled={isSubmitting}
                 >

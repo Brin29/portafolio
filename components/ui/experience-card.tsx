@@ -229,7 +229,7 @@ export const ExperienceCard = ({
                                 {project.technologies.map((tech, techIndex) => (
                                   <div
                                     key={techIndex}
-                                    className="border border-slate-200 dark:border-neutral-600 rounded-full w-8 h-8 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10 bg-white dark:bg-neutral-800"
+                                    className="border border-slate-400 dark:border-neutral-600 rounded-full w-8 h-8 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10 bg-slate-200 dark:bg-neutral-800"
                                     title={tech.name}
                                   >
                                     <img

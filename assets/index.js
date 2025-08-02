@@ -21,5 +21,14 @@ import urlShorten from "./projects/urlShorten.webp";
 import webSocket from "./projects/webSocket.webp"; 
 import detector from "./projects/detector.png"
 import redis from "./redis.svg"
+import nextJs from "./nextjs.svg"
+import typescript from "./typescript.svg"
+import javascript from "./javascript.svg"
+import html from "./html.svg"
+import css from "./css.svg"
+import graphql from "./graphql.svg"
+import firebase from "./firebase.svg"
+import docker from "./docker.svg"
+import aws from "./aws.svg"
 
-export { colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
+export { aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };

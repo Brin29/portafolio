@@ -1,5 +1,12 @@
 import {
   django,
+  aws,
+  docker,
+  html,
+  css,
+  nextJs,
+  typescript,
+  javascript,
   fastapi,
   git,
   github,
@@ -21,6 +28,8 @@ import {
   python,
   colab,
   roboflow,
+  firebase,
+  graphql,
   redis
 } from "../assets";
 
@@ -218,17 +227,25 @@ export const projects = [
   },
 ];
 
+  export const frontendSkills = [
+    { name: "React", image: react.src, },
+    { name: "Next.js", image: nextJs.src, },
+    { name: "TypeScript", image: typescript.src, },
+    { name: "JavaScript", image: javascript.src, },
+    { name: "HTML", image: html.src, },
+    { name: "CSS", image: css.src, },
+    { name: "Tailwind", image: tailwind.src, },
+    { name: "Vue", image: vue.src, },
+    { name: "Graphql", image: graphql.src, }
+  ]
 
-export const technologies = [
-  { name: "Spring Boot", icons: "spring boot" },
-  { name: "JAVA", icon: "java" },
-  { name: "React JS", icon: "react" },
-  { name: "Next JS", icon: "next" },
-  { name: "Tailwind CSS", icon: "tailwind css" },
-  { name: "MySQL", icon: "mysql" },
-  { name: "Docker", icon: "docker" },
-  { name: "Redis", icon: "redis" },
-  { name: "Djago", icon: "django" },
-  { name: "FatApi", icon: "fastApi" },
-  { name: "Vue JS", icon: "vue" },
-];
+  export const backendSkills = [
+    { name: "FastApi", image: fastapi.src, },
+    { name: "Django", image: django.src, },
+    { name: "Python", image: python.src, },
+    { name: "PostgreSQL", image: postgresql.src, },
+    { name: "MySQL", image: mysql.src, },
+    { name: "Firebase", image: firebase.src, },
+    { name: "Docker", image: docker.src, },
+    { name: "AWS", image: aws.src, },
+  ]

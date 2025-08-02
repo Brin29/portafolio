@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-.transition_theme{
-  transition:all ease 0.4s;
-}
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {

@@ -1,7 +1,14 @@
+"use client"
+
+import { useTheme } from "next-themes";
 import { Spotlight } from "./ui/Spotlight";
 import { ThreeDCardDemo } from "./ui/three-d-card-demo";
 
 export const Hero = () => {
+  const { theme } = useTheme()
+
+  const spotlightFillColor = theme === "dark" ? "white" : "blue"
+
   return (
     <section
       className="flex justify-center items-center w-full md:h-[100vh] h-[110vh]"
@@ -10,7 +17,7 @@ export const Hero = () => {
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
+          fill={spotlightFillColor}
         />
       </div>
       <div className="w-4/5 h-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-around gap-10">
@@ -18,7 +25,7 @@ export const Hero = () => {
           <ThreeDCardDemo />
         </div>
         <div className="md:mt-20 mt-40 w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-white text-4xl font-light md:text-5xl mb-6">
+          <h1 className="text-black dark:text-white text-4xl font-light md:text-5xl mb-6">
             Hola, soy <span> Breiner</span>
             <p className="font-normal">
               <span className="text-blue-400">Desarrollador </span>
@@ -28,7 +35,7 @@ export const Hero = () => {
             </p>
           </h1>
 
-          <p className="text-white w-full mb-7 font-extralight md:text-xl text-lg">
+          <p className="text-black dark:text-white w-full mb-7 font-extralight md:text-xl text-lg">
             Un apasionado del mundo del software y la tecnologia, con dos
             solidos años de experiencia en el desarrollo con React, experto en
             crear codigo escalable y bien estructurado, procurando utilizar
@@ -42,7 +49,7 @@ export const Hero = () => {
             </button>
           </div>
 
-          <div className="text-white flex flex-col gap-2 mt-4">
+          <div className="text-black dark:text-white flex flex-col gap-2 mt-4">
             <span className="text-sm sm:text-base">
               breinerstevendev&#64;gmail.com
             </span>
