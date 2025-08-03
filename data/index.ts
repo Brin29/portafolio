@@ -70,13 +70,13 @@ export const navItems = [
 export const contactDarkMode = [
   { icon: gmailDarkMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
   { icon: githubDarkMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "www.linkedin.com/in/breiner-parra"}
+  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breiner-parra"}
 ]
 
 export const contactClearMode = [
   { icon: gmailClearMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
   { icon: githubClearMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinClearMode.src, alt: "Linkedin", link: "www.linkedin.com/in/breiner-parra"}
+  { icon: linkedinClearMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breiner-parra"}
 ]
 
 
