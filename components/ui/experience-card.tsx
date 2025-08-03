@@ -1,6 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence, useAnimation } from "motion/react";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import {
   ChevronDown,
   Calendar,
@@ -48,54 +49,25 @@ export const ExperienceCard = ({
   }, [controls, inView]);
 
   const cardVariants = {
-    collapsed: {
-      height: "auto",
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut" as const,
-      },
-    },
-    expanded: {
-      height: "auto",
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut" as const,
-      },
-    },
+    collapsed: { height: "auto", transition: { duration: 0.3 } },
+    expanded: { height: "auto", transition: { duration: 0.3 } },
   };
 
   const variants = {
-    hidden: {
-      opacity: 0,
-      x: direction === "left" ? -100 : 100,
-    },
+    hidden: { opacity: 0, x: direction === "left" ? -100 : 100 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut" as const,
-      },
+      transition: { duration: 0.8 },
     },
   };
 
   const contentVariants = {
-    hidden: {
-      opacity: 0,
-      height: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut" as const,
-      },
-    },
+    hidden: { opacity: 0, height: 0, transition: { duration: 0.2 } },
     visible: {
       opacity: 1,
       height: "auto",
-      transition: {
-        duration: 0.3,
-        ease: "easeInOut" as const,
-        delay: 0.1,
-      },
+      transition: { duration: 0.3, delay: 0.1 },
     },
   };
 
@@ -109,40 +81,42 @@ export const ExperienceCard = ({
       variants={variants}
       animate={controls}
       ref={ref}
-      initial="hidden">
+      initial="hidden"
+      className="w-full"
+    >
       <motion.div
         variants={cardVariants}
         animate={isExpanded ? "expanded" : "collapsed"}
         className="bg-white dark:bg-neutral-900 shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-neutral-700 hover:shadow-xl transition-shadow duration-300 mb-6"
       >
-        {/* Header - Always visible */}
+        {/* Header */}
         <div
-          className="p-4 md:p-6 cursor-pointer select-none"
+          className="p-4 sm:p-5 md:p-6 cursor-pointer select-none"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-white" />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div className="min-w-0 flex-1">
-                <h1 className="text-lg md:text-xl font-bold text-slate-800 dark:text-white truncate">
+              <div>
+                <h1 className="text-base sm:text-lg md:text-xl font-bold text-slate-800 dark:text-white">
                   {exp.position}
                 </h1>
                 {exp.company && (
-                  <p className="text-base md:text-lg font-semibold text-blue-600 mb-1 md:mb-2 truncate">
+                  <p className="text-sm sm:text-base font-semibold text-blue-600">
                     {exp.company}
                   </p>
                 )}
-                <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-4 text-xs md:text-sm text-slate-500 dark:text-neutral-400">
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
-                    <span className="truncate">{exp.date}</span>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs sm:text-sm text-slate-500 dark:text-neutral-400">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{exp.date}</span>
                   </div>
                   {exp.location && (
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
-                      <span className="truncate">{exp.location}</span>
+                    <div className="flex items-center gap-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>{exp.location}</span>
                     </div>
                   )}
                 </div>
@@ -152,9 +126,9 @@ export const ExperienceCard = ({
               variants={chevronVariants}
               animate={isExpanded ? "expanded" : "collapsed"}
               transition={{ duration: 0.2 }}
-              className="flex-shrink-0 ml-2"
+              className="self-start sm:self-auto"
             >
-              <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-slate-400" />
+              <ChevronDown className="w-5 h-5 text-slate-400" />
             </motion.div>
           </div>
         </div>
@@ -169,67 +143,58 @@ export const ExperienceCard = ({
               exit="hidden"
               className="overflow-hidden"
             >
-              <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-4">
-                {/* Divider */}
-                <div className="w-full h-px bg-slate-200 dark:bg-neutral-700"></div>
-
-                {/* Content */}
-                <div className="space-y-4">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6 space-y-6">
+                <div className="h-px w-full bg-slate-200 dark:bg-neutral-700" />
+                <div className="space-y-6">
                   <div>
-                    <h4 className="text-xs md:text-sm font-semibold text-slate-700 dark:text-neutral-300 mb-2 uppercase tracking-wide">
+                    <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
                       Descripción
                     </h4>
-                    <p className="text-sm md:text-base text-slate-600 dark:text-neutral-400 leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 dark:text-neutral-400 leading-relaxed">
                       {exp.description.details}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-xs md:text-sm font-semibold text-slate-700 dark:text-neutral-300 mb-3 uppercase tracking-wide">
+                    <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
                       Proyectos
                     </h4>
                     <div className="space-y-6">
                       {exp.description.projects.map((project, index) => (
                         <div
                           key={index}
-                          className="border-l-2 border-slate-100 dark:border-neutral-700 pl-3 md:pl-4 space-y-3 md:space-y-4"
+                          className="border-l-2 border-slate-100 dark:border-neutral-700 pl-3 sm:pl-4 space-y-4"
                         >
-                          {/* Project Name */}
-                          <div className="flex items-start space-x-2 md:space-x-3">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <h5 className="font-semibold text-slate-800 dark:text-white text-sm md:text-base leading-tight">
+                          {/* Nombre del Proyecto */}
+                          <div className="flex items-start gap-3">
+                            <div className="w-2 h-2 mt-2 rounded-full bg-green-500" />
+                            <h5 className="text-sm sm:text-base font-semibold text-slate-800 dark:text-white">
                               {project.name}
                             </h5>
                           </div>
 
-                          {/* Project Description as List */}
-                          <div className="ml-4 md:ml-5 space-y-2">
-                            <ul className="space-y-2">
-                              {project.description.map((item, descIndex) => (
-                                <li
-                                  key={descIndex}
-                                  className="flex items-start space-x-2 md:space-x-3"
-                                >
-                                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                                  <p className="text-xs md:text-sm text-slate-600 dark:text-neutral-400 leading-relaxed">
-                                    {item}
-                                  </p>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                          {/* Descripción en lista */}
+                          <ul className="ml-5 space-y-2">
+                            {project.description.map((desc, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <p className="text-xs sm:text-sm text-slate-600 dark:text-neutral-400 leading-relaxed">
+                                  {desc}
+                                </p>
+                              </li>
+                            ))}
+                          </ul>
 
-                          {/* Technologies */}
-                          <div className="ml-4 md:ml-5">
-                            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
-                              <span className="text-xs text-slate-500 dark:text-neutral-400 font-medium flex-shrink-0">
+                          {/* Tecnologías */}
+                          <div className="ml-5">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                              <span className="text-xs font-medium text-slate-500 dark:text-neutral-400">
                                 Tecnologías:
                               </span>
                               <div className="flex flex-wrap gap-2">
-                                {project.technologies.map((tech, techIndex) => (
+                                {project.technologies.map((tech, j) => (
                                   <div
-                                    key={techIndex}
-                                    className="border border-slate-400 dark:border-neutral-600 rounded-full w-8 h-8 flex justify-center items-center transition-transform duration-300 hover:-translate-y-1 hover:z-10 bg-slate-200 dark:bg-neutral-800"
+                                    key={j}
+                                    className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-300 dark:border-neutral-600 bg-slate-200 dark:bg-neutral-800 hover:-translate-y-1 transition-transform"
                                     title={tech.name}
                                   >
                                     <img
@@ -243,18 +208,16 @@ export const ExperienceCard = ({
                             </div>
                           </div>
 
-                          {/* Project Button */}
-                          {project.hadWebSite ? (
-                            <div className="flex justify-start ml-4 md:ml-5">
-                                <a href={project.webSite} target="_blank">
-                                <button className="cursor-pointer inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 md:py-2.5 md:px-5 rounded-lg text-xs md:text-sm font-medium hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
-                                  <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
-                                  <span>Ver Proyecto</span>
+                          {/* Botón */}
+                          {project.hadWebSite && (
+                            <div className="ml-5">
+                              <a href={project.webSite} target="_blank">
+                                <button className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:scale-105 transition-transform shadow-sm">
+                                  <ExternalLink className="w-4 h-4" />
+                                  Ver Proyecto
                                 </button>
-                            </a>
-                              </div>
-                          ) : (
-                            <div></div>
+                              </a>
+                            </div>
                           )}
                         </div>
                       ))}

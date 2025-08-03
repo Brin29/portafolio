@@ -5,7 +5,7 @@ import SkillCard from "@/components/skill-card"
 
 export default function Skills() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+    <section id="habilidades" className="w-[80vw] lg:w-[70vw] m-auto py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
       {/* Patrón de fondo sutil */}
       <div
         className="absolute inset-0 z-0 opacity-10 dark:opacity-5"

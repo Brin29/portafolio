@@ -1,5 +1,13 @@
 import {
+  githubClearMode,
+  githubDarkMode,
+  linkedinClearMode,
+  linkedinDarkMode,
+  gmailClearMode,
+  gmailDarkMode,
   django,
+  gmail,
+  linkedin,
   aws,
   docker,
   html,
@@ -37,20 +45,42 @@ export const navItems = [
   {
     name: "Sobre Mi",
     link: "#sobre_mi",
+    icon: "inicio"
   },
   {
     name: "Experiencia",
     link: "#experiencia",
+    icon: "experiencia"
   },
   {
     name: "Proyectos",
     link: "#proyectos",
+    icon: "proyectos"
+  },
+  {
+    name: "Habilidades",
+    link: "#habilidades",
+    icon: "habilidades"
   },
   {
     name: "Contacto",
     link: "#contacto",
+    icon: "contacto"
   },
 ];
+
+export const contactDarkMode = [
+  { icon: gmailDarkMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
+  { icon: githubDarkMode.src, alt: "Github", link: "https://github.com/Brin29"},
+  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "www.linkedin.com/in/breiner-parra"}
+]
+
+export const contactClearMode = [
+  { icon: gmailClearMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
+  { icon: githubClearMode.src, alt: "Github", link: "https://github.com/Brin29"},
+  { icon: linkedinClearMode.src, alt: "Linkedin", link: "www.linkedin.com/in/breiner-parra"}
+]
+
 
 export const experience = [
   {
@@ -140,7 +170,6 @@ export const experienceFreelancer = [
             "Lidere y colabore con el desarrollo completo desde cero de la aplicación web con React, Spring Boot y MySQL",
             "Diseñe la interfaz de principio a fin de la UI/UX",
             "Integre diferentes herramientas y API's externas como mercado pago para el manejo de pasarelas de pago",
-            "Desplegue la aplicación web con vercel",
           ],
           technologies: [
             { name: "Spring Boot", icon: springboot.src },

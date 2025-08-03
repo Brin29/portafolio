@@ -45,7 +45,7 @@ export const Contact = () => {
   }
 
   return (
-    <div id="contacto" className="m-auto md:w-[80vw] w-[65vw] mt-[100px] md:mt-[20px] min-h-scree flex items-center justify-center px-4 py-10">
+    <div id="contacto" className="m-auto md:w-[80vw] w-[85vw] mt-[100px] md:mt-[100px] min-h-scree flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Formulario */}
