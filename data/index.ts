@@ -119,6 +119,7 @@ export const experience = [
             "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro",
           ],
           hadWebSite: false,
+          webSite: "#",
           technologies: [
             { name: "FastApi", icon: fastapi.src },
             { name: "Vue JS", icon: vue.src },
@@ -169,6 +170,8 @@ export const experienceFreelancer = [
             "Diseñe la interfaz de principio a fin de la UI/UX",
             "Integre diferentes herramientas y API's externas como mercado pago para el manejo de pasarelas de pago",
           ],
+          hadWebSite: false,
+          webSite: "#",
           technologies: [
             { name: "Spring Boot", icon: springboot.src },
             { name: "React JS", icon: react.src },
@@ -187,6 +190,8 @@ export const experienceFreelancer = [
             "Colabore con diseñadores para la interfaz del frontend",
             "Maquete la arquitectura de la aplicación",
           ],
+          hadWebSite: false,
+          webSite: "#",
           technologies: [
             { name: "Django", icon: django.src },
             { name: "React", icon: react.src },
@@ -202,22 +207,6 @@ export const experienceFreelancer = [
   },
 ];
 
-export const experiences = [
-  {
-    date: "2025 - Actualidad",
-    title: "Tecnoparque - FullStack",
-    content:
-      "dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd sasda dadada",
-    src: "",
-  },
-  {
-    date: "2025 - 2024",
-    title: "Freelancer - FullSatck",
-    content:
-      "dadsa dasd sadsad dsadsa dsadadsadad sadsadasdsa dsadsadada sdsadasdsa dasdadsad dsadsadsa dadada sdadsadsadadasdas dasdsa asdsadsadasd asdsadsa dadsadsa dsadsadd",
-    src: "",
-  },
-];
 
 export const projects = [
   {
