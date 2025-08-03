@@ -228,7 +228,7 @@ export const projects = [
     des: "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas. El usuario ingresa características como tipo o personalidad, y recibe sugerencias personalizadas con ayuda de IA generativa.",
     img: petsName.src,
     iconLists: [vue.src, n8n.src, django.src, mysql.src, git.src, github.src, postman.src],
-    link: "/ui.earth.com",
+    link: "https://github.com/Brin29/pets-name",
   },
   {
     id: 2,
@@ -236,7 +236,7 @@ export const projects = [
     des: "Proyecto de visión computarizada que detecta caminos de tierra en imágenes mediante modelos de inteligencia artificial entrenados con Roboflow. Se utiliza procesamiento de imágenes y aprendizaje automático para mejorar la detección visual en diferentes entornos.",
     img: detector.src,
     iconLists: [python.src, matbloptlip.src, roboflow.src, ultratycs.src, colab.src, git.src, github.src],
-    link: "/ui.yoom.com",
+    link: "https://github.com/Brin29/Detector",
   },
   {
     id: 3,
@@ -244,7 +244,7 @@ export const projects = [
     des: "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis. Las URLs acortadas se almacenan en caché con Redis, lo cual reduce las peticiones externas y mejora el rendimiento. Permite crear y recuperar enlaces de forma rápida y eficiente.",
     img: urlShorten.src,
     iconLists: [vue.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
-    link: "/ui.aiimg.com",
+    link: "https://github.com/Brin29/Acortador-de-Url-s",
   },
   {
     id: 4,
@@ -252,7 +252,7 @@ export const projects = [
     des: "Aplicación de mensajería construida con WebSockets, Spring Boot y Redis. Permite a los usuarios comunicarse en tiempo real mediante un sistema escalable que utiliza pub/sub para manejar eventos distribuidos y mantener las conversaciones activas.",
     img: webSocket.src,
     iconLists: [vue.src, springboot.src, mysql.src, git.src, github.src],
-    link: "/ui.apple.com",
+    link: "https://github.com/Brin29/web-socket",
   },
 ];
 

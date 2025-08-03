@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { Spotlight } from "./ui/Spotlight";
 import { ThreeDCardDemo } from "./ui/three-d-card-demo";
 import { contactClearMode, contactDarkMode } from "@/data";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const { theme } = useTheme();
@@ -12,7 +13,7 @@ export const Hero = () => {
 
   return (
     <section
-      className="relative flex flex-col justify-center items-center w-full min-h-screen px-4 py-16 sm:py-24 md:px-8"
+      className="m-auto relative flex flex-col justify-center items-center w-full min-h-screen px-4 py-16 sm:py-24 md:px-8"
       id="sobre_mi"
     >
       <div className="absolute inset-0 z-0">
@@ -34,15 +35,14 @@ export const Hero = () => {
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
               <span className="text-blue-400">Desarrollador </span>
-              <span className="text-blue-400">Front </span>
-              <span className="text-blue-400">End </span>
+              <span className="text-blue-400">FullStack </span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Un apasionado del mundo del software y la tecnología, con dos
-            solidos años de experiencia en desarrollo con React. Experto en
+            Un apasionado del mundo del software y la tecnología, con un
+            solido año de experiencia en desarrollo con React/Django. Experto en
             crear código escalable y bien estructurado, utilizando buenas
             prácticas y documentación clara. Comprometido con la calidad y
             mejora continua.

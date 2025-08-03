@@ -47,6 +47,7 @@ export const ExperienceCard = ({
       controls.start("visible");
     }
   }, [controls, inView]);
+  
 
   const cardVariants = {
     collapsed: { height: "auto", transition: { duration: 0.3 } },
