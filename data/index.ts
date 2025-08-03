@@ -6,8 +6,6 @@ import {
   gmailClearMode,
   gmailDarkMode,
   django,
-  gmail,
-  linkedin,
   aws,
   docker,
   html,

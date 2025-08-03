@@ -37,4 +37,4 @@ import gmailClearMode from "./contact/gmail-clearmode.svg"
 import linkedinDarkMode  from "./contact/linkedin-darkmode.svg"
 import linkedinClearMode from "./contact/linkedin-clearmode.svg"
 
-export { githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, linkedin, gmail, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
+export { githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
