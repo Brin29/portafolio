@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/utils/cn";
+import type { ComponentPropsWithRef, ElementType, ReactNode } from "react";
 
 import React, {
   createContext,
@@ -93,9 +94,22 @@ export const CardBody = ({
     </div>
   );
 };
+type PolymorphicComponentProps<T extends ElementType, Props = {}> = Props &
+  Omit<ComponentPropsWithRef<T>, keyof Props> & { as?: T };
 
-export const CardItem = ({
-  as: Tag = "div",
+type CardItemBaseProps = {
+  children?: ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+};
+
+export const CardItem = <T extends ElementType = "div">({
+  as,
   children,
   className,
   translateX = 0,
@@ -105,19 +119,9 @@ export const CardItem = ({
   rotateY = 0,
   rotateZ = 0,
   ...rest
-}: {
-  as?: React.ElementType;
-  children: React.ReactNode;
-  className?: string;
-  translateX?: number | string;
-  translateY?: number | string;
-  translateZ?: number | string;
-  rotateX?: number | string;
-  rotateY?: number | string;
-  rotateZ?: number | string;
-  [key: string]: any;
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
+}: PolymorphicComponentProps<T, CardItemBaseProps>) => {
+  const Tag = as || "div";
+  const ref = useRef<HTMLElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
@@ -132,15 +136,15 @@ export const CardItem = ({
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
   };
-
-  return (
-    <Tag
-      ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}
-    >
-      {children}
-    </Tag>
+  
+  return React.createElement(
+    Tag,
+    {
+      ref,
+      className: cn("w-fit transition duration-200 ease-linear", className),
+      ...rest,
+    },
+    children
   );
 };
 
