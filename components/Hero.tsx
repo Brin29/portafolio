@@ -35,14 +35,14 @@ export const Hero = () => {
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
               <span className="text-blue-400">Desarrollador </span>
-              <span className="text-blue-400">FullStack </span>
+              <span className="text-blue-400">Back end </span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
             Un apasionado del mundo del software y la tecnología, con un
-            solido año de experiencia en desarrollo con Angular/Spring Boot. Experto en
+            solido año de experiencia en desarrollo con Django. Experto en
             crear código escalable y bien estructurado, utilizando buenas
             prácticas y documentación clara. Comprometido con la calidad y
             mejora continua.
