@@ -122,7 +122,7 @@ export const experience = [
           hadWebSite: false,
           webSite: "#",
           technologies: [
-            { name: "FastApi", icon: fastapi.src },
+            { name: "Django", icon: fastapi.src },
             { name: "Vue JS", icon: vue.src },
             { name: "PostgreSQL", icon: postgresql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
