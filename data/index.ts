@@ -1,4 +1,3 @@
-import { image } from "motion/react-client";
 import {
   githubClearMode,
   githubDarkMode,
@@ -37,7 +36,8 @@ import {
   roboflow,
   firebase,
   graphql,
-  redis
+  redis,
+  angular
 } from "../assets";
 
 export const navItems = [
@@ -175,7 +175,7 @@ export const experienceFreelancer = [
           webSite: "#",
           technologies: [
             { name: "Spring Boot", icon: springboot.src },
-            { name: "React JS", icon: react.src },
+            { name: "Angular", icon: angular.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "MySQL", icon: mysql.src },
             { name: "Git", icon: git.src },
@@ -195,7 +195,7 @@ export const experienceFreelancer = [
           webSite: "#",
           technologies: [
             { name: "Django", icon: django.src },
-            { name: "React", icon: react.src },
+            { name: "Angular", icon: angular.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "MySQL", icon: mysql.src },
             { name: "Git", icon: git.src },
@@ -231,7 +231,7 @@ export const projects = [
     title: "Acortador de URL's",
     des: "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis. Las URLs acortadas se almacenan en caché con Redis, lo cual reduce las peticiones externas y mejora el rendimiento. Permite crear y recuperar enlaces de forma rápida y eficiente.",
     img: urlShorten.src,
-    iconLists: [vue.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
+    iconLists: [angular.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
     link: "https://github.com/Brin29/Acortador-de-Url-s",
   },
   {
@@ -239,7 +239,7 @@ export const projects = [
     title: "Mensajes en tiempo real",
     des: "Aplicación de mensajería construida con WebSockets, Spring Boot y Redis. Permite a los usuarios comunicarse en tiempo real mediante un sistema escalable que utiliza pub/sub para manejar eventos distribuidos y mantener las conversaciones activas.",
     img: webSocket.src,
-    iconLists: [vue.src, springboot.src, mysql.src, git.src, github.src],
+    iconLists: [angular.src, springboot.src, mysql.src, git.src, github.src],
     link: "https://github.com/Brin29/web-socket",
   },
 ];
