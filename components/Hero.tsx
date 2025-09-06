@@ -35,14 +35,14 @@ export const Hero = () => {
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
               <span className="text-blue-400">Desarrollador </span>
-              <span className="text-blue-400">Full Stack</span>
+              <span className="text-blue-400">Front end</span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
             Un apasionado del mundo del software y la tecnología, con dos
-            solidos años de experiencia en desarrollo con React/Django. Experto en
+            solidos años de experiencia en desarrollo con React/Next.js Experto en
             crear código escalable y bien estructurado, utilizando buenas
             prácticas y documentación clara. Comprometido con la calidad y
             mejora continua.
