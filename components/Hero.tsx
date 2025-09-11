@@ -41,8 +41,8 @@ export const Hero = () => {
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Un apasionado del mundo del software y la tecnología, con dos
-            solidos años de experiencia en desarrollo con React/Django Experto en
+            Un apasionado del mundo del software y la tecnología, con un
+            solido año de experiencia en desarrollo con React/Django Experto en
             crear código escalable y bien estructurado, utilizando buenas
             prácticas y documentación clara. Comprometido con la calidad y
             mejora continua.
