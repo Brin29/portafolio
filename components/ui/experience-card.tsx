@@ -215,7 +215,7 @@ export const ExperienceCard = ({
                               <a href={project.webSite} target="_blank">
                                 <button className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:scale-105 transition-transform shadow-sm">
                                   <ExternalLink className="w-4 h-4" />
-                                  Ver Proyecto
+                                  Ver
                                 </button>
                               </a>
                             </div>

@@ -37,7 +37,8 @@ import {
   firebase,
   graphql,
   redis,
-  angular
+  angular,
+  mui
 } from "../assets";
 
 export const navItems = [
@@ -82,8 +83,40 @@ export const contactClearMode = [
 
 
 export const experience = [
-  {
+    {
     id: 1,
+    date: "2025 - 2026",
+    position: "Desarrollador Frontend",
+    description: {
+      details:
+      "Gestionar, junto con mis compañeros de trabajo, el desarrollo completo del proyecto desde cero, incluyendo el desarrollo, las pruebas de calidad y el despliegue a producción",
+      projects: [
+        {
+          name: "Ivolucion Latam",
+          description: [
+            "Implementar y mantener el frontend utilizando React, TypeScript y Docker, garantizando la estabilidad y escalabilidad del software",
+
+            "Desplegar la aplicación en Azure, asegurando un proceso de liberación eficiente y sin interrupciones",
+            
+            "Apoyar el desarrollo del frontend, garantizando una interfaz de usuario intuitiva y eficiente",
+          ],
+          hadWebSite: true,
+          webSite: "https://ivolucion.com/",
+          technologies: [
+            { name: "React", icon: react.src },
+            { name: "MUI", icon: mui.src },
+            { name: "TypeScript", icon: typescript.src },
+            { name: "Docker", icon: docker.src },
+            { name: "Git", icon: git.src },
+            { name: "Github", icon: github.src },
+            { name: "Postman", icon: postman.src }
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: 2,
     date: "2025",
     position: "Desarrollador Full stack",
     description: {
@@ -152,6 +185,7 @@ export const experience = [
       ],
     },
   },
+  
 ];
 
 export const experienceFreelancer = [
