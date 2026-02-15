@@ -33,6 +33,7 @@ export const Hero = () => {
     >
       <div
         style={{
+          zIndex: "10",
           display: "flex",
           gap: "10px",
           position: "absolute",
