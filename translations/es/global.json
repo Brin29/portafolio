@@ -1,0 +1,523 @@
+{
+  "navItems": [
+    {
+      "name": "Sobre Mi",
+      "link": "#sobre_mi",
+      "icon": "inicio"
+    },
+    {
+      "name": "Experiencia",
+      "link": "#experiencia",
+      "icon": "experiencia"
+    },
+    {
+      "name": "Proyectos",
+      "link": "#proyectos",
+      "icon": "proyectos"
+    },
+    {
+      "name": "Habilidades",
+      "link": "#habilidades",
+      "icon": "habilidades"
+    },
+    {
+      "name": "Contacto",
+      "link": "#contacto",
+      "icon": "contacto"
+    }
+  ],
+  "section": {
+    "sectionOne": "sobre_mi",
+    "sectionTwo": "experiencia",
+    "sectionThree": "proyectos",
+    "sectionFour": "habilidades",
+    "sectionFive": "contacto"
+  },
+  "title": {
+    "title": "Hola, soy Breiner",
+    "function": "Desarrollador",
+    "subtitle": "Un apasionado del mundo del software y la tecnología, con dos solidos años de experiencia en desarrollo con React/SpringBoot. Experto en crear código escalable y bien estructurado, utilizando buenas prácticas y documentación clara. Comprometido con la calidad y mejora continua.",
+    "aviableWorked": "Disponible para trabajar"
+  },
+  "contact": {
+    "darkMode": [
+      {
+        "icon": "gmailDarkMode",
+        "alt": "Gmail",
+        "link": "mailto:breinerstevendev@gmail.com"
+      },
+      {
+        "icon": "githubDarkMode",
+        "alt": "Github",
+        "link": "https://github.com/Brin29"
+      },
+      {
+        "icon": "linkedinDarkMode",
+        "alt": "Linkedin",
+        "link": "https://www.linkedin.com/in/breiner-parra"
+      }
+    ],
+    "clearMode": [
+      {
+        "icon": "gmailClearMode",
+        "alt": "Gmail",
+        "link": "mailto:breinerstevendev@gmail.com"
+      },
+      {
+        "icon": "githubClearMode",
+        "alt": "Github",
+        "link": "https://github.com/Brin29"
+      },
+      {
+        "icon": "linkedinClearMode",
+        "alt": "Linkedin",
+        "link": "https://www.linkedin.com/in/breiner-parra"
+      }
+    ]
+  },
+  "experienceTitle": {
+    "title": "Mi Experiencia <span className='text-blue-400 font-normal'>Profesional</span>",
+    "subtitle": "Un recorrido por mi trayectoria, destacando los proyectos más relevantes en los que he trabajado y las habilidades que he desarrollado a lo largo del camino."
+  },
+  "experiences": [
+    {
+      "id": 1,
+      "date": "2025 - 2026",
+      "position": "Desarrollador Frontend",
+      "description": {
+        "details": "Gestionar, junto con mis compañeros de trabajo, el desarrollo completo del proyecto desde cero, incluyendo el desarrollo, las pruebas de calidad y el despliegue a producción",
+        "projects": [
+          {
+            "name": "Ivolucion Latam",
+            "description": [
+              "Implementar y mantener el frontend utilizando React, TypeScript y Docker, garantizando la estabilidad y escalabilidad del software",
+              "Desplegar la aplicación en Azure, asegurando un proceso de liberación eficiente y sin interrupciones",
+              "Apoyar el desarrollo del frontend, garantizando una interfaz de usuario intuitiva y eficiente"
+            ],
+            "hadWebSite": true,
+            "webSite": "https://ivolucion.com/",
+            "technologies": [
+              {
+                "name": "React",
+                "icon": "react"
+              },
+              {
+                "name": "MUI",
+                "icon": "mui"
+              },
+              {
+                "name": "TypeScript",
+                "icon": "typescript"
+              },
+              {
+                "name": "Docker",
+                "icon": "docker"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "date": "2025",
+      "position": "Desarrollador Full stack",
+      "description": {
+        "details": "En tecnoparque me encargue de liderar y desarrollar una gran variedad de proyectos para distintos clientes, me encarga de la comunicación y el desarrollo del proyecto",
+        "projects": [
+          {
+            "name": "Contaflow",
+            "description": [
+              "Gestione el desarrollo completo desde cero de la aplicación web con Vue, Django y MySQL encargandome del diseño de la arquitectura, el desarrollo de las API's haciendolas seguras con JWT",
+              "Colabore con el equipo de diseño de la UI/UX para garantizar una experiencia optima",
+              "Cree e integre con el back end, flujos por medio de el automatizador de n8n integrandolo a su vez con gemini"
+            ],
+            "hadWebSite": true,
+            "webSite": "https://contaflow.nativoweb.com/login",
+            "technologies": [
+              {
+                "name": "Django",
+                "icon": "django"
+              },
+              {
+                "name": "Vue JS",
+                "icon": "vue"
+              },
+              {
+                "name": "N8n",
+                "icon": "n8n"
+              },
+              {
+                "name": "MySQL",
+                "icon": "mysql"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          },
+          {
+            "name": "Siprot IA (Desarrollo)",
+            "description": [
+              "Desarrolle el modelo LSTM para realizar predicciones multivariadas con sklearn de python",
+              "Lidere el desarrollo del frontend y backend utilizando Vue y FastAPI, asegurando una interfaz intuitiva, eficiente y una buena estructuracion de las API's y de la seguridad con JWT",
+              "Documente cada fase del desarrollo del modelo LSTM, facilitando la comprensión y mantenimiento futuro"
+            ],
+            "hadWebSite": false,
+            "webSite": "#",
+            "technologies": [
+              {
+                "name": "FastAPI",
+                "icon": "fastapi"
+              },
+              {
+                "name": "Vue JS",
+                "icon": "vue"
+              },
+              {
+                "name": "PostgreSQL",
+                "icon": "postgresql"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          },
+          {
+            "name": "Pets Flyer (Desarrollo)",
+            "description": [
+              "Gestione el desarrollo completo del blockchain con solana para crear contratos inteligentes para la autenticidad de documentos",
+              "Integre la conexión del blockchain con la interfaz de frontend utilizando buenas practicas",
+              "Documente cada fase de desarrollo del blockchain, para mantenimientos futuros del proyecto"
+            ],
+            "hadWebSite": true,
+            "webSite": "https://petsflyer.com/",
+            "technologies": [
+              {
+                "name": "Solana",
+                "icon": "solana"
+              },
+              {
+                "name": "React",
+                "icon": "react"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "experienceFreelancer": [
+    {
+      "id": 3,
+      "date": "2024 - 2025",
+      "position": "Desarrollador Freelancer",
+      "description": {
+        "details": "En mi paso como freelancer desarrolle y implemente dos proyectos para distintos clientes nacionales y internacionales",
+        "projects": [
+          {
+            "name": "Rame",
+            "description": [
+              "Lidere y colabore con el desarrollo completo desde cero de la aplicación web con React, Spring Boot y MySQL",
+              "Diseñe la interfaz de principio a fin de la UI/UX",
+              "Integre diferentes herramientas y API's externas como mercado pago para el manejo de pasarelas de pago"
+            ],
+            "hadWebSite": false,
+            "webSite": "#",
+            "technologies": [
+              {
+                "name": "Spring Boot",
+                "icon": "springboot"
+              },
+              {
+                "name": "Angular",
+                "icon": "angular"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "MySQL",
+                "icon": "mysql"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          },
+          {
+            "name": "Inventario (Desarrollo)",
+            "description": [
+              "Desarrolle de principio a fin toda la interfaz con Vue y Django",
+              "Me encargue de la creación de las API's y el manejo de de la seguridad con JWT",
+              "Colabore con diseñadores para la interfaz del frontend",
+              "Maquete la arquitectura de la aplicación"
+            ],
+            "hadWebSite": false,
+            "webSite": "#",
+            "technologies": [
+              {
+                "name": "Django",
+                "icon": "django"
+              },
+              {
+                "name": "Angular",
+                "icon": "angular"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "MySQL",
+                "icon": "mysql"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "Github",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "projects": {
+    "title": "Mis mejores <span className=\"text-blue-400 font-normal\">Proyectos personales</span> ",
+    "subtitle": "Explora la sección de mis proyectos personales, donde he aplicado mis conocimientos en desarrollo web, backend y nuevas tecnologías. Cada proyecto representa un reto resuelto con código limpio, escalable y funcional, reflejando mi evolución como desarrollador y mi pasión por crear soluciones innovadoras.",
+    "project": [
+      {
+        "id": 1,
+        "title": "Generador de Nombres para mascotas",
+        "description": "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas.",
+        "image": "petsName",
+        "icons": [
+          "vue",
+          "n8n",
+          "django",
+          "mysql",
+          "git",
+          "github",
+          "postman"
+        ],
+        "link": "https://github.com/Brin29/pets-name"
+      },
+      {
+        "id": 2,
+        "title": "Detector de caminos",
+        "description": "Proyecto de visión computarizada que detecta caminos de tierra en imágenes mediante modelos de inteligencia artificial entrenados con Roboflow.",
+        "image": "detector",
+        "icons": [
+          "python",
+          "matplotlib",
+          "roboflow",
+          "ultralytics",
+          "colab",
+          "git",
+          "github"
+        ],
+        "link": "https://github.com/Brin29/Detector"
+      },
+      {
+        "id": 3,
+        "title": "Acortador de URL's",
+        "description": "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis.",
+        "image": "urlShorten",
+        "icons": [
+          "angular",
+          "tailwind",
+          "springboot",
+          "mysql",
+          "redis",
+          "git",
+          "github"
+        ],
+        "link": "https://github.com/Brin29/Acortador-de-Url-s"
+      },
+      {
+        "id": 4,
+        "title": "Mensajes en tiempo real",
+        "description": "Aplicación de mensajería construida con WebSockets, Spring Boot y Redis.",
+        "image": "webSocket",
+        "icons": [
+          "angular",
+          "springboot",
+          "mysql",
+          "git",
+          "github"
+        ],
+        "link": "https://github.com/Brin29/web-socket"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Mis Habilidades Técnicas",
+    "subtitle": " Tecnologías y herramientas con las que trabajo en el desarrollo frontend y backend.",
+    "frontend": [
+      {
+        "name": "React",
+        "icon": "react"
+      },
+      {
+        "name": "Next.js",
+        "icon": "nextJs"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript"
+      },
+      {
+        "name": "HTML",
+        "icon": "html"
+      },
+      {
+        "name": "CSS",
+        "icon": "css"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "tailwind"
+      },
+      {
+        "name": "Vue",
+        "icon": "vue"
+      },
+      {
+        "name": "Graphql",
+        "icon": "graphql"
+      }
+    ],
+    "backend": [
+      {
+        "name": "FastApi",
+        "icon": "fastapi"
+      },
+      {
+        "name": "Django",
+        "icon": "django"
+      },
+      {
+        "name": "Python",
+        "icon": "python"
+      },
+      {
+        "name": "Spring Boot",
+        "icon": "springboot"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql"
+      },
+      {
+        "name": "MySQL",
+        "icon": "mysql"
+      },
+      {
+        "name": "Firebase",
+        "icon": "firebase"
+      },
+      {
+        "name": "Docker",
+        "icon": "docker"
+      },
+      {
+        "name": "AWS",
+        "icon": "aws"
+      }
+    ]
+  },
+
+  "contactMe": {
+    "title": "Contáctame",
+    "description": "¿Tienes una idea, proyecto o propuesta de trabajo? Estoy disponible para trabajar en nuevos desafíos. Completa el formulario y me pondré en contacto contigo lo antes posible.",
+    "successMessage": "¡Mensaje enviado con éxito! Te responderé pronto.",
+    "errorMessage": "Algo salió mal. Por favor, intenta de nuevo.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "Tu email",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "sending": "Enviando...",
+      "submit": "Enviar mensaje"
+    },
+    "footerNote": "Suelo responder en menos de 24 horas. ¡Estoy atento a tu mensaje!"
+  }
+}

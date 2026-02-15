@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import {
@@ -10,6 +11,23 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
+import {
+  react,
+  mui,
+  typescript,
+  docker,
+  git,
+  github,
+  postman,
+  django,
+  vue,
+  n8n,
+  mysql,
+  tailwind,
+  postgresql,
+  fastapi,
+} from "@/assets";
 
 interface Project {
   name: string;
@@ -19,7 +37,7 @@ interface Project {
   webSite: string;
 }
 
-interface ExperienceItem {
+export interface ExperienceItem {
   id: number;
   date: string;
   position: string;
@@ -38,6 +56,7 @@ export const ExperienceCard = ({
   exp: ExperienceItem;
   direction: "left" | "right";
 }) => {
+  const [t] = useTranslation("global");
   const [isExpanded, setIsExpanded] = useState(false);
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.3 });
@@ -47,7 +66,6 @@ export const ExperienceCard = ({
       controls.start("visible");
     }
   }, [controls, inView]);
-  
 
   const cardVariants = {
     collapsed: { height: "auto", transition: { duration: 0.3 } },
@@ -75,6 +93,23 @@ export const ExperienceCard = ({
   const chevronVariants = {
     collapsed: { rotate: 0 },
     expanded: { rotate: 180 },
+  };
+
+  const iconMap: Record<string, any> = {
+    react,
+    mui,
+    typescript,
+    docker,
+    git,
+    github,
+    postman,
+    django,
+    vue,
+    n8n,
+    mysql,
+    tailwind,
+    postgresql,
+    fastapi,
   };
 
   return (
@@ -198,10 +233,14 @@ export const ExperienceCard = ({
                                     className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-300 dark:border-neutral-600 bg-slate-200 dark:bg-neutral-800 hover:-translate-y-1 transition-transform"
                                     title={tech.name}
                                   >
-                                    <img
-                                      src={tech.icon || "/placeholder.svg"}
+                                    <Image
+                                      src={
+                                        iconMap[tech.icon] || "/placeholder.svg"
+                                      }
                                       alt={tech.name}
-                                      className="w-5 h-5 object-contain"
+                                      width={20}
+                                      height={20}
+                                      className="object-contain"
                                     />
                                   </div>
                                 ))}
