@@ -225,6 +225,99 @@
       }
     }
   ],
+  "experienceFreelancer": [
+    {
+      "id": 3,
+      "date": "2024 - 2025",
+      "position": "Freelance Developer",
+      "description": {
+        "details": "During my time as a freelancer, I developed and implemented two projects for different national and international clients.",
+        "projects": [
+          {
+            "name": "Rame",
+            "description": [
+              "Led and collaborated on the complete development of the web application from scratch using React, Spring Boot, and MySQL.",
+              "Designed the UI/UX from start to finish.",
+              "Integrated different tools and external APIs such as Mercado Pago for payment gateway management."
+            ],
+            "hadWebSite": false,
+            "webSite": "#",
+            "technologies": [
+              {
+                "name": "Spring Boot",
+                "icon": "springboot"
+              },
+              {
+                "name": "Angular",
+                "icon": "angular"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "MySQL",
+                "icon": "mysql"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "GitHub",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          },
+          {
+            "name": "Inventory (Development)",
+            "description": [
+              "Developed the entire interface from start to finish using Vue and Django.",
+              "Handled API creation and security management with JWT.",
+              "Collaborated with designers on the frontend interface.",
+              "Structured and designed the application architecture."
+            ],
+            "hadWebSite": false,
+            "webSite": "#",
+            "technologies": [
+              {
+                "name": "Django",
+                "icon": "django"
+              },
+              {
+                "name": "Angular",
+                "icon": "angular"
+              },
+              {
+                "name": "Tailwind CSS",
+                "icon": "tailwind"
+              },
+              {
+                "name": "MySQL",
+                "icon": "mysql"
+              },
+              {
+                "name": "Git",
+                "icon": "git"
+              },
+              {
+                "name": "GitHub",
+                "icon": "github"
+              },
+              {
+                "name": "Postman",
+                "icon": "postman"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "projects": {
     "title": "My Best <span className=\"text-blue-400 font-normal\">Personal Projects</span>",
     "subtitle": "Explore the section of my personal projects, where I have applied my knowledge in web development, backend engineering, and emerging technologies. Each project represents a challenge solved with clean, scalable, and functional code, reflecting my growth as a developer and my passion for building innovative solutions.",
@@ -389,5 +482,8 @@
       "submit": "Send message"
     },
     "footerNote": "I usually reply within 24 hours. Looking forward to your message!"
-  }
+  },
+  "projectDes": "Description",
+  "projectProy": "Projects",
+  "ver": "View"
 }

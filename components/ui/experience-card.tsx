@@ -27,6 +27,9 @@ import {
   tailwind,
   postgresql,
   fastapi,
+  springboot,
+  angular,
+  solana,
 } from "@/assets";
 
 interface Project {
@@ -104,9 +107,12 @@ export const ExperienceCard = ({
     github,
     postman,
     django,
+    springboot,
+    angular,
     vue,
     n8n,
     mysql,
+    solana,
     tailwind,
     postgresql,
     fastapi,
@@ -184,7 +190,7 @@ export const ExperienceCard = ({
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
-                      Descripción
+                      {t("projectDes")}
                     </h4>
                     <p className="text-sm sm:text-base text-slate-600 dark:text-neutral-400 leading-relaxed">
                       {exp.description.details}
@@ -193,7 +199,7 @@ export const ExperienceCard = ({
 
                   <div>
                     <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
-                      Proyectos
+                      {t("projectProy")}
                     </h4>
                     <div className="space-y-6">
                       {exp.description.projects.map((project, index) => (
@@ -224,7 +230,6 @@ export const ExperienceCard = ({
                           <div className="ml-5">
                             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
                               <span className="text-xs font-medium text-slate-500 dark:text-neutral-400">
-                                Tecnologías:
                               </span>
                               <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, j) => (
@@ -254,7 +259,7 @@ export const ExperienceCard = ({
                               <a href={project.webSite} target="_blank">
                                 <button className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:scale-105 transition-transform shadow-sm">
                                   <ExternalLink className="w-4 h-4" />
-                                  Ver
+                                  {t("ver")}
                                 </button>
                               </a>
                             </div>

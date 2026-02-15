@@ -519,5 +519,9 @@
       "submit": "Enviar mensaje"
     },
     "footerNote": "Suelo responder en menos de 24 horas. ¡Estoy atento a tu mensaje!"
-  }
+  },
+
+  "projectDes": "Descripción",
+  "projectProy": "Proyectos",
+  "ver": "Ver"
 }
