@@ -38,7 +38,7 @@
   "title": {
     "title": "Hi, I'm Breiner",
     "function": "Developer",
-    "subtitle": "A passionate software and technology enthusiast with two solid years of experience developing with React and Spring Boot. Skilled at creating scalable, well-structured code by applying best practices and clear documentation. Committed to quality and continuous improvement.",
+    "subtitle": "A passionate software and technology enthusiast with two solid years of experience developing with React.js and Next.js. Skilled at creating scalable, well-structured code by applying best practices and clear documentation. Committed to quality and continuous improvement.",
     "aviableWorked": "Available for work"
   },
   "contact": {
@@ -135,7 +135,7 @@
     {
       "id": 2,
       "date": "2025",
-      "position": "Full Stack Developer",
+      "position": "FrontEnd Developer",
       "description": {
         "details": "At Tecnoparque, I led and developed a wide variety of projects for different clients, handling both communication and project development.",
         "projects": [

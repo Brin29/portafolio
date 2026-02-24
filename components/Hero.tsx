@@ -95,7 +95,7 @@ export const Hero = () => {
             {t("title.title")}
             <p className="font-normal mt-2">
               <span className="text-blue-400">{t("title.function")}{" "}</span>
-              <span className="text-blue-400">Full Stack</span>
+              <span className="text-blue-400">FrontEnd</span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>

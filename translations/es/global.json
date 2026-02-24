@@ -38,7 +38,7 @@
   "title": {
     "title": "Hola, soy Breiner",
     "function": "Desarrollador",
-    "subtitle": "Un apasionado del mundo del software y la tecnología, con dos solidos años de experiencia en desarrollo con React/SpringBoot. Experto en crear código escalable y bien estructurado, utilizando buenas prácticas y documentación clara. Comprometido con la calidad y mejora continua.",
+    "subtitle": "Un apasionado del mundo del software y la tecnología, con dos solidos años de experiencia en desarrollo con React.js/Next.js. Experto en crear código escalable y bien estructurado, utilizando buenas prácticas y documentación clara. Comprometido con la calidad y mejora continua.",
     "aviableWorked": "Disponible para trabajar"
   },
   "contact": {
@@ -135,7 +135,7 @@
     {
       "id": 2,
       "date": "2025",
-      "position": "Desarrollador Full stack",
+      "position": "Desarrollador Frontend",
       "description": {
         "details": "En tecnoparque me encargue de liderar y desarrollar una gran variedad de proyectos para distintos clientes, me encarga de la comunicación y el desarrollo del proyecto",
         "projects": [
