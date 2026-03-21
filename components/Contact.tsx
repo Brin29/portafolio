@@ -8,13 +8,11 @@ import { PlanetCanva } from "./canvas/PlanetCanva"
 import { Label } from "./ui/label"
 import emailjs from "@emailjs/browser"
 import { cn } from "@/utils/cn"
-import { useTranslation } from "react-i18next"
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const form = useRef<HTMLFormElement>(null)
-  const [t] = useTranslation("global")
 
   const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
   const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
@@ -47,38 +45,39 @@ export const Contact = () => {
   }
 
   return (
-    <div id={t("section.sectionFive")} className="m-auto md:w-[80vw] w-[85vw] mt-[100px] md:mt-[100px] min-h-scree flex items-center justify-center px-4 py-10">
+    <div id="contacto" className="m-auto md:w-[80vw] w-[85vw] mt-[100px] md:mt-[100px] min-h-scree flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Formulario */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-lg shadow-2xl bg-white dark:bg-black border border-neutral-50 dark:border-neutral-800 text-white rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-2">{t("contactMe.title")}</h2>
+              <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Contáctame</h2>
               <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
-                {t("contactMe.description")}
+                ¿Tienes una idea, proyecto o propuesta de trabajo? Estoy disponible para trabajar en nuevos desafíos.
+                Completa el formulario y me pondré en contacto contigo lo antes posible.
               </p>
 
               {submitStatus === "success" && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
-                  <p className="text-green-400 text-sm">{t("contactMe.successMessage")}</p>
+                  <p className="text-green-400 text-sm">¡Mensaje enviado con éxito! Te responderé pronto.</p>
                 </div>
               )}
 
               {submitStatus === "error" && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
-                  <p className="text-red-400 text-sm">{t("contactMe.errorMessage")}</p>
+                  <p className="text-red-400 text-sm">Algo salió mal. Por favor, intenta de nuevo.</p>
                 </div>
               )}
 
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <LabelInputContainer>
                   <Label htmlFor="name" className="text-neutral-800 dark:text-neutral-200">
-                    {t("contactMe.form.name")}
+                    Nombre
                   </Label>
                   <Input
                     id="name"
                     name="name"
-                    placeholder={t("contactMe.form.namePlaceholder")}
+                    placeholder="Tu nombre"
                     type="text"
                     required
                     className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
@@ -87,12 +86,12 @@ export const Contact = () => {
 
                 <LabelInputContainer>
                   <Label htmlFor="email" className="text-neutral-800 dark:text-neutral-200">
-                    {t("contactMe.form.email")}
+                    Email
                   </Label>
                   <Input
                     id="email"
                     name="email"
-                    placeholder={t("contactMe.form.emailPlaceholder")}
+                    placeholder="Tu email"
                     type="email"
                     required
                     className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white dark:placeholder:text-neutral-500
@@ -103,7 +102,7 @@ export const Contact = () => {
 
                 <LabelInputContainer>
                   <Label htmlFor="message" className="text-neutral-800 dark:text-neutral-200">
-                    {t("contactMe.form.message")}
+                    Mensaje
                   </Label>
                   <Textarea
                     id="message"
@@ -111,7 +110,7 @@ export const Contact = () => {
                     rows={5}
                     required
                     className="resize-none bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
-                    placeholder={t("contactMe.form.messagePlaceholder")}
+                    placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </LabelInputContainer>
 
@@ -120,7 +119,7 @@ export const Contact = () => {
                   type="submit"
                   disabled={isSubmitting}
                 >
-                  <span className="relative z-10">{isSubmitting ? t("contactMe.form.sending") : t("contactMe.form.submit")} &rarr;</span>
+                  <span className="relative z-10">{isSubmitting ? "Enviando..." : "Enviar mensaje"} &rarr;</span>
                   <BottomGradient />
                 </button>
 
@@ -131,7 +130,7 @@ export const Contact = () => {
                 </div>
 
                 <p className="text-xs text-neutral-400 text-center">
-                  {t("contactMe.footerNote")}
+                  Suelo responder en menos de 24 horas. ¡Estoy atento a tu mensaje!
                 </p>
               </form>
             </div>

@@ -16,10 +16,13 @@ export const FloatingNav = ({
   navItems,
   className,
 }: {
-  navItems: any[];
+  navItems: {
+    name: string;
+    link: string;
+    icon?: string;
+  }[];
   className?: string;
 }) => {
-
   const { scrollYProgress } = useScroll();
   const { setTheme, theme } = useTheme();
   const [visible, setVisible] = useState(false);

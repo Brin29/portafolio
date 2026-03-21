@@ -43,7 +43,7 @@ import {
 
 export const navItems = [
   {
-    name: "Sobre Mi",
+    name: "Sobre mi",
     link: "#sobre_mi",
     icon: "inicio"
   },
