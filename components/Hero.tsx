@@ -35,7 +35,7 @@ export const Hero = () => {
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
               <span className="text-blue-400">desarrollador </span>
-              <span className="text-blue-400">frontend</span>
+              <span className="text-blue-400">Frontend</span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
