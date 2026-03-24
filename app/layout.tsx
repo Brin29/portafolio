@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import EntranceAnimation from "./entrance-animation";
+// import EntranceAnimation from "./entrance-animation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        <EntranceAnimation/>
+        
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import {
@@ -10,6 +11,26 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
+import {
+  react,
+  mui,
+  typescript,
+  docker,
+  git,
+  github,
+  postman,
+  django,
+  vue,
+  n8n,
+  mysql,
+  tailwind,
+  postgresql,
+  fastapi,
+  springboot,
+  angular,
+  solana,
+} from "@/assets";
 
 interface Project {
   name: string;
@@ -19,7 +40,7 @@ interface Project {
   webSite: string;
 }
 
-interface ExperienceItem {
+export interface ExperienceItem {
   id: number;
   date: string;
   position: string;
@@ -38,6 +59,7 @@ export const ExperienceCard = ({
   exp: ExperienceItem;
   direction: "left" | "right";
 }) => {
+  const [t] = useTranslation("global");
   const [isExpanded, setIsExpanded] = useState(false);
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.3 });
@@ -47,7 +69,6 @@ export const ExperienceCard = ({
       controls.start("visible");
     }
   }, [controls, inView]);
-  
 
   const cardVariants = {
     collapsed: { height: "auto", transition: { duration: 0.3 } },
@@ -75,6 +96,26 @@ export const ExperienceCard = ({
   const chevronVariants = {
     collapsed: { rotate: 0 },
     expanded: { rotate: 180 },
+  };
+
+  const iconMap: Record<string, any> = {
+    react,
+    mui,
+    typescript,
+    docker,
+    git,
+    github,
+    postman,
+    django,
+    springboot,
+    angular,
+    vue,
+    n8n,
+    mysql,
+    solana,
+    tailwind,
+    postgresql,
+    fastapi,
   };
 
   return (
@@ -149,7 +190,7 @@ export const ExperienceCard = ({
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
-                      Descripción
+                      {t("projectDes")}
                     </h4>
                     <p className="text-sm sm:text-base text-slate-600 dark:text-neutral-400 leading-relaxed">
                       {exp.description.details}
@@ -158,7 +199,7 @@ export const ExperienceCard = ({
 
                   <div>
                     <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
-                      Proyectos
+                      {t("projectProy")}
                     </h4>
                     <div className="space-y-6">
                       {exp.description.projects.map((project, index) => (
@@ -189,7 +230,6 @@ export const ExperienceCard = ({
                           <div className="ml-5">
                             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
                               <span className="text-xs font-medium text-slate-500 dark:text-neutral-400">
-                                Tecnologías:
                               </span>
                               <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, j) => (
@@ -198,10 +238,14 @@ export const ExperienceCard = ({
                                     className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-300 dark:border-neutral-600 bg-slate-200 dark:bg-neutral-800 hover:-translate-y-1 transition-transform"
                                     title={tech.name}
                                   >
-                                    <img
-                                      src={tech.icon || "/placeholder.svg"}
+                                    <Image
+                                      src={
+                                        iconMap[tech.icon] || "/placeholder.svg"
+                                      }
                                       alt={tech.name}
-                                      className="w-5 h-5 object-contain"
+                                      width={20}
+                                      height={20}
+                                      className="object-contain"
                                     />
                                   </div>
                                 ))}
@@ -215,7 +259,7 @@ export const ExperienceCard = ({
                               <a href={project.webSite} target="_blank">
                                 <button className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:scale-105 transition-transform shadow-sm">
                                   <ExternalLink className="w-4 h-4" />
-                                  Ver
+                                  {t("ver")}
                                 </button>
                               </a>
                             </div>
