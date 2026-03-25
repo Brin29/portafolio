@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { FloatingNav } from "./ui/floating-navbar";
-import { useTranslation } from "react-i18next";
+import { navItems } from "@/data";
 
 export function FloatingNavDemo() {
-  const [mounted, setMounted] = useState(false);
-  const [t] = useTranslation("global");
+  const [ mounted, setMounted ] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -15,7 +14,7 @@ export function FloatingNavDemo() {
 
   return (
     <div className="relative  transition-all duration-200 w-full">
-      <FloatingNav navItems={t("navItems", { returnObjects: true }) as any[]} />
+      <FloatingNav navItems={navItems} />
     </div>
   );
 }

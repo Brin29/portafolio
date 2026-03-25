@@ -2,11 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useTranslation } from "react-i18next";
 
 export default function EntranceAnimation() {
   const [showAnimation, setShowAnimation] = useState(false)
-  const [t] = useTranslation("global");
 
   useEffect(() => {
     // Comprueba si la animación ya se ha mostrado en esta sesión
@@ -38,7 +36,7 @@ export default function EntranceAnimation() {
             animate={{ y: 0, opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            {t("welcome")}
+            Bienvenido a mi portafolio
           </motion.h1>
         </motion.div>
       )}
