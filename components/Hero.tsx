@@ -34,8 +34,8 @@ export const Hero = () => {
           <h1 className="text-black dark:text-white text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-light mb-6">
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
-              <span className="text-blue-400">desarrollador </span>
-              <span className="text-blue-400">frontend</span>
+              <span className="text-blue-400">desarrollador</span>
+              <span className="text-blue-400">de Software</span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
