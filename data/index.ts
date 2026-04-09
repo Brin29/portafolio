@@ -86,7 +86,7 @@ export const experience = [
     {
     id: 1,
     date: "2025 - 2026",
-    position: "Desarrollador Frontend",
+    position: "Desarrollador de Software",
     description: {
       details:
       "Gestionar, junto con mis compañeros de trabajo, el desarrollo completo del proyecto desde cero, incluyendo el desarrollo, las pruebas de calidad y el despliegue a producción",
