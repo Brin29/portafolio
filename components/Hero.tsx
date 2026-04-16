@@ -41,7 +41,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Un apasionado del mundo del software y la tecnología, con dos sólidos años de experiencia en desarrollo. Experto en crear código
+            Un apasionado del mundo del software y la tecnología, con más de un año de experiencia en desarrollo. Experto en crear código
             escalable, modular y bien estructurado, utilizando buenas prácticas
             y documentación clara. Comprometido con la calidad y mejora
             continua.
