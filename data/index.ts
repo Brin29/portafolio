@@ -38,7 +38,8 @@ import {
   graphql,
   redis,
   angular,
-  mui
+  mui,
+  nest
 } from "../assets";
 
 export const navItems = [
@@ -103,7 +104,7 @@ export const experience = [
           hadWebSite: true,
           webSite: "https://ivolucion.com/",
           technologies: [
-            { name: "React", icon: react.src },
+            { name: "Angular", icon: angular.src },
             { name: "MUI", icon: mui.src },
             { name: "TypeScript", icon: typescript.src },
             { name: "Docker", icon: docker.src },
@@ -135,8 +136,8 @@ export const experience = [
           hadWebSite: true,
           webSite: "https://contaflow.nativoweb.com/login",
           technologies: [
-            { name: "Django", icon: django.src },
-            { name: "Vue JS", icon: vue.src },
+            { name: "Nest.js", icon: nest.src },
+            { name: "Angular", icon: angular.src },
             { name: "N8n", icon: n8n.src },
             { name: "MySQL", icon: mysql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
@@ -155,8 +156,8 @@ export const experience = [
           hadWebSite: false,
           webSite: "#",
           technologies: [
-            { name: "Django", icon: fastapi.src },
-            { name: "Vue JS", icon: vue.src },
+            { name: "Django", icon: django.src },
+            { name: "Angular", icon: angular.src },
             { name: "PostgreSQL", icon: postgresql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "Git", icon: git.src },
@@ -291,7 +292,7 @@ export const projects = [
   ]
 
   export const backendSkills = [
-    { name: "FastApi", image: fastapi.src, },
+    { name: "Nest.js", image: nest.src, },
     { name: "Django", image: django.src, },
     { name: "Python", image: python.src, },
     { name: "Spring Boot", image: springboot.src },

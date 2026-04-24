@@ -1,4 +1,5 @@
-import django from "./django.svg"
+import django from "./django.svg";
+import nest from "./nest.svg";
 import fastapi from "./fastapi.svg";
 import git from "./git.svg";
 import github from "./github.svg";
@@ -39,4 +40,4 @@ import linkedinDarkMode  from "./contact/linkedin-darkmode.svg"
 import linkedinClearMode from "./contact/linkedin-clearmode.svg"
 import mui from "./MUI.svg"
 
-export { mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
+export { nest, mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
