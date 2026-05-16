@@ -41,10 +41,13 @@ export const Hero = () => {
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Un apasionado del mundo del software y la tecnología, con más de un de experiencia en desarrollo. Experto en crear código
-            escalable, modular y bien estructurado, utilizando buenas prácticas
-            y documentación clara. Comprometido con la calidad y mejora
-            continua.
+            Apasionado por el mundo del software y la tecnología, con más de un
+            año de experiencia en desarrollo de aplicaciones web. Experto en
+            React y Django, enfocado en la creación de soluciones escalables,
+            modulares y bien estructuradas, aplicando buenas prácticas de
+            desarrollo y documentación clara. Comprometido con la calidad del
+            software, el aprendizaje continuo y la mejora constante de los
+            procesos y productos tecnológicos.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
