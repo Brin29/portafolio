@@ -39,7 +39,10 @@ import {
   redis,
   angular,
   mui,
-  nest
+  nest,
+  devpulse,
+  node,
+  fastify
 } from "../assets";
 
 export const navItems = [
@@ -247,19 +250,19 @@ export const experienceFreelancer = [
 export const projects = [
   {
     id: 1,
+    title: "DevPulse",
+    des: "DevPulse es una plataforma de gestión de proyectos, tareas e incidentes diseñada para equipos de desarrollo de software. Su objetivo es centralizar la planificación, seguimiento y colaboración de equipos técnicos mediante una experiencia moderna inspirada en herramientas como Jira, Linear y GitHub.",
+    img: devpulse.src,
+    iconLists: [react.src, typescript.src, node.src, fastify.src, git.src, github.src],
+    link: "https://dev-pulse-front.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Generador de Nombres para mascotas",
     des: "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas. El usuario ingresa características como tipo o personalidad, y recibe sugerencias personalizadas con ayuda de IA generativa.",
     img: petsName.src,
     iconLists: [vue.src, n8n.src, django.src, mysql.src, git.src, github.src, postman.src],
     link: "https://github.com/Brin29/pets-name",
-  },
-  {
-    id: 2,
-    title: "Detector de caminos",
-    des: "Proyecto de visión computarizada que detecta caminos de tierra en imágenes mediante modelos de inteligencia artificial entrenados con Roboflow. Se utiliza procesamiento de imágenes y aprendizaje automático para mejorar la detección visual en diferentes entornos.",
-    img: detector.src,
-    iconLists: [python.src, matbloptlip.src, roboflow.src, ultratycs.src, colab.src, git.src, github.src],
-    link: "https://github.com/Brin29/Detector",
   },
   {
     id: 3,

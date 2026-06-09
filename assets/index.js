@@ -17,6 +17,7 @@ import n8n from "./n8n.png";
 import springboot from "./springboot.svg";
 import tailwind from "./tailwind.svg";
 import vue from "./vue.svg";
+import devpulse from "./projects/devpulse.png"
 import petsName from "./projects/pets_name.png";
 import urlShorten from "./projects/urlShorten.webp";
 import webSocket from "./projects/webSocket.webp"; 
@@ -27,6 +28,8 @@ import typescript from "./typescript.svg"
 import javascript from "./javascript.svg"
 import html from "./html.svg"
 import css from "./css.svg"
+import fastify from "./fastify.svg"
+import node from "./nodejs.svg"
 import graphql from "./graphql.svg"
 import firebase from "./firebase.svg"
 import docker from "./docker.svg"
@@ -40,4 +43,4 @@ import linkedinDarkMode  from "./contact/linkedin-darkmode.svg"
 import linkedinClearMode from "./contact/linkedin-clearmode.svg"
 import mui from "./MUI.svg"
 
-export { nest, mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
+export { devpulse, fastify, node, nest, mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
