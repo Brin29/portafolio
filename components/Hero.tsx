@@ -34,16 +34,16 @@ export const Hero = () => {
           <h1 className="text-black dark:text-white text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-light mb-6">
             Hola, soy <span>Breiner</span>
             <p className="font-normal mt-2">
-              <span className="text-blue-400">Frontend </span>
+              <span className="text-blue-400">Full Stack </span>
               <span className="text-blue-400">Developer</span>
               <span className="hand animate-bounce">👋🏽</span>
             </p>
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Apasionado por el mundo del software y la tecnología, con más de dos
-            años de experiencia en desarrollo de aplicaciones web. Experto en
-            React/Next.js, enfocado en la creación de soluciones escalables,
+            Apasionado por el mundo del software y la tecnología, con más de un
+            año de experiencia en desarrollo de aplicaciones web. Experto en
+            React/Next.js y Python, enfocado en la creación de soluciones escalables,
             modulares y bien estructuradas, aplicando buenas prácticas de
             desarrollo y documentación clara. Comprometido con la calidad del
             software, el aprendizaje continuo y la mejora constante de los
