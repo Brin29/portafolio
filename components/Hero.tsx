@@ -43,7 +43,7 @@ export const Hero = () => {
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
             Apasionado por el mundo del software y la tecnología, con más de un
             año de experiencia en desarrollo de aplicaciones web. Experto en
-            React/Next.js y Python, enfocado en la creación de soluciones escalables,
+            React/Next.js, Python y Node.js, enfocado en la creación de soluciones escalables,
             modulares y bien estructuradas, aplicando buenas prácticas de
             desarrollo y documentación clara. Comprometido con la calidad del
             software, el aprendizaje continuo y la mejora constante de los
