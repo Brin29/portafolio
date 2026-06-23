@@ -42,7 +42,7 @@ export const Hero = () => {
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
             Apasionado por el mundo del software y la tecnología, Experto en
-            React/Next.js y Node.js enfocado en la creación de soluciones escalables,
+            React y Python enfocado en la creación de soluciones escalables,
             modulares y bien estructuradas, aplicando buenas prácticas de
             desarrollo y documentación clara. Comprometido con la calidad del
             software, el aprendizaje continuo y la mejora constante de los
@@ -50,7 +50,7 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
-            <button className="bg-green-500 px-6 py-2 text-white text-base sm:text-lg rounded-xl shadow-md hover:bg-green-600 transition">
+            <button className="bg-green-500 px-6 py-2 text-white text-bvase sm:text-lg rounded-xl shadow-md hover:bg-green-600 transition">
               Disponible para trabajar
             </button>
           </div>
