@@ -199,7 +199,7 @@ export const ExperienceCard = ({
                                     title={tech.name}
                                   >
                                     <img
-                                      src={tech.icon || "/placeholder.svg"}
+                                      src={tech.icon}
                                       alt={tech.name}
                                       className="w-5 h-5 object-contain"
                                     />

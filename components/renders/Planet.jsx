@@ -17,7 +17,7 @@ export function Planet(props) {
   }, [actions, animations])
 
   return (
-    <group ref={group} {...props} dispose={null} scale={1.2}>
+    <group ref={group} {...props} dispose={null} scale={2.5}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-1.54, -0.064, 0]}>
           <group name="root">

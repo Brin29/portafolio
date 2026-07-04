@@ -21,7 +21,7 @@ export default function SkillBadge({ skill }: SkillBadgeProps) {
       whileHover="hover"
       aria-label={skill.name}
     >
-      <img src={skill.image || "/placeholder.svg"} alt={skill.name} className="h-6 w-6 mr-2" />
+      <img src={skill.image} alt={skill.name} className="h-6 w-6 mr-2" />
       {skill.name}
     </motion.div>
   )

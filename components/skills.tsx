@@ -9,7 +9,7 @@ export default function Skills() {
       {/* Patrón de fondo sutil */}
       <div
         className="absolute inset-0 z-0 opacity-10 dark:opacity-5"
-        style={{ backgroundImage: 'url("/placeholder.svg?height=200&width=200")' }}
+        // style={{ backgroundImage: 'url("/placeholder.svg?height=200&width=200")' }}
         aria-hidden="true"
       ></div>
       <div className="container px-4 md:px-6 relative z-10">

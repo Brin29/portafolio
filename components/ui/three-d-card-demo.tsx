@@ -10,6 +10,7 @@ export function ThreeDCardDemo() {
   <CardBody className="flex items-center justify-center rounded-full w-[310px] h-[310px]  bg-gradient-to-br from-blue-400 via-blue-400 to-blue-400">
     <CardItem translateZ="100" className="w-full flex items-center justify-center">
       <Image
+        priority
         src="/photo.webp"
         height="1000"
         width="1000"
