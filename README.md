@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Breiner Parra - Developer Portfolio
 
-## Getting Started
+Este repositorio contiene el código fuente de mi portafolio personal, donde presento mi experiencia, proyectos, habilidades y trayectoria como desarrollador de software.
 
-First, run the development server:
+🌐 **Sitio web:** https://breinerdev-portafolio.vercel.app
+
+---
+
+## 📖 Sobre el proyecto
+
+El objetivo de este portafolio es mostrar mi perfil profesional, las tecnologías con las que trabajo y algunos de los proyectos que he desarrollado, tanto personales como profesionales.
+
+En el sitio podrás encontrar:
+
+- 👨‍💻 Información sobre mí
+- 💼 Experiencia profesional
+- 🚀 Proyectos destacados
+- 🛠️ Stack tecnológico
+- 📄 Descarga de mi CV
+- 📬 Formulario de contacto
+- 🔗 Enlaces a GitHub y LinkedIn
+
+---
+
+## ✨ Características
+
+- Diseño moderno y responsive
+- Navegación fluida
+- Optimización para dispositivos móviles
+- Animaciones para mejorar la experiencia de usuario
+- Secciones organizadas para facilitar la lectura
+- Despliegue automático mediante Vercel
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+
+### Herramientas
+
+- Git
+- GitHub
+- Vercel
+- Figma
+
+---
+
+## 📁 Estructura del proyecto
+
+```text
+src/
+│
+├── assets/
+├── components/
+├── pages/
+├── hooks/
+├── services/
+├── styles/
+├── utils/
+└── App.tsx
+```
+
+---
+
+## 🚀 Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
+
+Ingresa al proyecto:
+
+```bash
+cd tu-repositorio
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Vista previa
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Puedes visitar el proyecto aquí:
 
-## Learn More
+👉 **https://breinerdev-portafolio.vercel.app**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contacto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Si deseas ponerte en contacto conmigo:
 
-## Deploy on Vercel
+- 💼 LinkedIn
+- 💻 GitHub
+- 📧 Email disponible desde el portafolio
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Objetivo
+
+Mi objetivo es continuar creciendo como desarrollador Backend especializado en tecnologías como:
+
+- Java
+- Spring Boot
+- Django
+- PostgreSQL
+- Docker
+- AWS
+- Arquitectura de Software
+- APIs REST
+- GraphQL
+- WebSockets
+
+Además, disfruto desarrollar aplicaciones Full Stack cuando el proyecto lo requiere.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+Puedes utilizarlo como inspiración para crear tu propio portafolio.

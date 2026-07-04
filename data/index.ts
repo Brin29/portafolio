@@ -145,7 +145,7 @@ export const experience = [
           ],
         },
         {
-          name: "Siprot IA (Desarrollo)",
+          name: "Siprot IA",
           description: [
             "Desarrolle el modelo LSTM para realizar predicciones multivariadas con sklearn de python",
             "Lidere el desarrollo del frontend y backend utilizando Vue y FastAPI, asegurando una interfaz intuitiva, eficiente y una buena estructuracion de las API's y de la seguridad con JWT",
@@ -164,7 +164,7 @@ export const experience = [
           ],
         },
         {
-          name: "Pets FLyer (Desarrollo)",
+          name: "Pets FLyer",
           description: [
             "Gestione el desarrollo completo del blockchain con solana para crear contratos inteligentes para la autenticidad de documentos",
             "Integre la conexión del blockchain con la interfaz de frontend utilizando buenas practicas",
