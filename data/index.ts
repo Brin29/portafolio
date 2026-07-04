@@ -28,13 +28,7 @@ import {
   webSocket,
   petsName,
   urlShorten,
-  detector,
-  matbloptlip,
-  ultratycs,
   python,
-  colab,
-  roboflow,
-  firebase,
   graphql,
   redis,
   angular,
@@ -42,7 +36,8 @@ import {
   nest,
   devpulse,
   node,
-  fastify
+  fastify,
+  azure
 } from "../assets";
 
 export const navItems = [
@@ -76,13 +71,13 @@ export const navItems = [
 export const contactDarkMode = [
   { icon: gmailDarkMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
   { icon: githubDarkMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breiner-parra"}
+  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breinerdev"}
 ]
 
 export const contactClearMode = [
   { icon: gmailClearMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
   { icon: githubClearMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinClearMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breiner-parra"}
+  { icon: linkedinClearMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breinerdev"}
 ]
 
 
@@ -93,7 +88,7 @@ export const experience = [
     position: "Full Stack Developer",
     description: {
       details:
-      "Gestionar, junto con mis compañeros de trabajo, el desarrollo completo del proyecto desde cero, incluyendo el desarrollo, las pruebas de calidad y el despliegue a producción",
+      "Desarrollo completo de un proyecto, incluyendo las pruebas de calidad y el despliegue a producción de un sistema de parqueaderos",
       projects: [
         {
           name: "Ivolucion Latam",
@@ -290,18 +285,16 @@ export const projects = [
     { name: "HTML", image: html.src, },
     { name: "CSS", image: css.src, },
     { name: "Tailwind", image: tailwind.src, },
-    { name: "Vue", image: vue.src, },
-    { name: "Graphql", image: graphql.src, }
+    { name: "Material UI", image: mui.src }
   ]
-
+  
   export const backendSkills = [
-    { name: "Nest.js", image: nest.src, },
     { name: "Django", image: django.src, },
     { name: "Python", image: python.src, },
-    { name: "Spring Boot", image: springboot.src },
+    { name: "Node.js", image: node.src },
     { name: "PostgreSQL", image: postgresql.src, },
     { name: "MySQL", image: mysql.src, },
-    { name: "Firebase", image: firebase.src, },
     { name: "Docker", image: docker.src, },
-    { name: "AWS", image: aws.src, },
+    { name: "Graphql", image: graphql.src, },
+    { name: "Azure", image: azure.src }
   ]

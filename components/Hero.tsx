@@ -41,12 +41,10 @@ export const Hero = () => {
           </h1>
 
           <p className="text-black dark:text-white text-lg sm:text-xl lg:text-lg font-extralight my-6">
-            Apasionado por el mundo del software y la tecnología, Experto en
-            React y Django enfocado en la creación de soluciones escalables,
-            modulares y bien estructuradas, aplicando buenas prácticas de
-            desarrollo y documentación clara. Comprometido con la calidad del
-            software, el aprendizaje continuo y la mejora constante de los
-            procesos y productos tecnológicos.
+            Apasionado por el mundo del software y la tecnología, con
+            experiencia en React/TypeScript y Django/Python. Me enfoco en la
+            creación de soluciones escalables, modulares y bien estructuradas
+            mediante la aplicación de buenas prácticas de desarrollo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center sm:items-start">
@@ -56,9 +54,6 @@ export const Hero = () => {
           </div>
 
           <div className="text-black dark:text-white mt-6 text-center lg:text-left">
-            <span className="block text-sm sm:text-base">
-              breinerstevendev&#64;gmail.com
-            </span>
             <div className="flex gap-4 justify-center lg:justify-start mt-2">
               {theme === "dark"
                 ? contactDarkMode.map((el, index) => (

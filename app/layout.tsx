@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   keywords: ["portafolio", "Breiner Parra", "desarrollador", "proyectos", "software", "frontend", "backend", "fullstack"],
   authors: [{ name: "Breiner Parra" }],
   creator: "Breiner Parra",
-  metadataBase: new URL("https://tusitio.com"),
+  metadataBase: new URL("https://breinerdev-portafolio.vercel.app"),
   openGraph: {
     title: "Breiner Parra | Portafolio de Desarrollador",
     description: "Explora los proyectos, habilidades y experiencia de Breiner Parra como desarrollador de software.",
-    url: "https://tusitio.com",
+    url: "https://breinerdev-portafolio.vercel.app",
     siteName: "Breiner Parra - Portafolio",
     locale: "es_CO",
     type: "website",
