@@ -1,8 +1,27 @@
 "use client"
 
 import { OrbitControls } from "@react-three/drei"
-import { Canvas } from "@react-three/fiber"
+import { Canvas, useFrame } from "@react-three/fiber"
 import { Planet } from "../renders/Planet"
+import { useRef } from "react"
+import * as THREE from "three"
+
+function GoldenRing() {
+  const ref = useRef<THREE.Mesh>(null!)
+
+  useFrame(({ clock }) => {
+    if (ref.current) {
+      ref.current.rotation.y = clock.getElapsedTime() * 0.08
+    }
+  })
+
+  return (
+    <mesh ref={ref} rotation={[Math.PI / 2.2, 0.3, 0]}>
+      <torusGeometry args={[4.2, 0.035, 16, 120]} />
+      <meshBasicMaterial color="#E8B84B" transparent opacity={0.35} />
+    </mesh>
+  )
+}
 
 export const PlanetCanva = () => {
   return (
@@ -27,8 +46,8 @@ export const PlanetCanva = () => {
           shadow-camera-bottom={-10}
         />
         <spotLight position={[8, 8, 8]} angle={0.2} penumbra={0.3} intensity={1} castShadow />
-        <pointLight position={[-8, -8, -8]} intensity={0.5} color="#4f46e5" />
-        <pointLight position={[8, -8, 8]} intensity={0.3} color="#06b6d4" />
+        <pointLight position={[-8, -8, -8]} intensity={0.5} color="#E8B84B" />
+        <pointLight position={[8, -8, 8]} intensity={0.3} color="#E8B84B" />
 
         <OrbitControls
           enableZoom={false}

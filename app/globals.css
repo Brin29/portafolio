@@ -3,47 +3,41 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
-  --radius-sm:;
-  --color-background:;
-}
- 
-@keyframes spotlight {
-  0% {
-    opacity: 0;
-    transform: translate(-72%, -62%) scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -40%) scale(1);
-  }
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-sora);
+
+  --color-void: #0B0D1A;
+  --color-deep: #151B2E;
+  --color-surface: #1E2440;
+  --color-cream: #F2EFE8;
+  --color-gold: #E8B84B;
+  --color-ember: #D14836;
+  --color-blue-giant: #3B82C4;
+
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
 }
 
-.hand{
-    position: absolute;
-    transform: rotate(0deg);
-    animation: wave 2s infinite;
-    transform-origin: bottom center;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-html{
-  scroll-behavior:smooth ;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

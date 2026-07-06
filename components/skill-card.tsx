@@ -22,13 +22,13 @@ export default function SkillCard({ title, skills, delay = 0 }: SkillCardProps) 
 
   return (
     <motion.div
-      className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg flex flex-col items-center"
+      className="bg-white dark:bg-deep rounded-xl p-8 shadow-lg border border-neutral-100 dark:border-white/5 flex flex-col items-center"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <h3 className="text-2xl font-bold text-center mb-6">{title}</h3>
+      <h3 className="text-2xl font-bold text-center mb-6 font-display text-gold">{title}</h3>
       <div className="flex flex-wrap justify-center gap-3">
         {skills.map((skill, index) => (
           <SkillBadge key={index} skill={skill} />

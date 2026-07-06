@@ -88,7 +88,7 @@ export const ExperienceCard = ({
       <motion.div
         variants={cardVariants}
         animate={isExpanded ? "expanded" : "collapsed"}
-        className="bg-white dark:bg-neutral-900 shadow-lg rounded-2xl overflow-hidden border border-slate-200 dark:border-neutral-700 hover:shadow-xl transition-shadow duration-300 mb-6"
+        className="bg-white dark:bg-deep shadow-lg rounded-2xl overflow-hidden border border-neutral-200 dark:border-white/5 hover:shadow-xl transition-shadow duration-300 mb-6"
       >
         {/* Header */}
         <div
@@ -97,15 +97,15 @@ export const ExperienceCard = ({
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gold/20 border border-gold/30 rounded-full flex items-center justify-center">
+                <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
               </div>
               <div>
-                <h1 className="text-base sm:text-lg md:text-xl font-bold text-slate-800 dark:text-white">
+                <h1 className="text-base sm:text-lg md:text-xl font-bold text-void dark:text-white">
                   {exp.position}
                 </h1>
                 {exp.company && (
-                  <p className="text-sm sm:text-base font-semibold text-blue-600">
+                  <p className="text-sm sm:text-base font-semibold text-gold">
                     {exp.company}
                   </p>
                 )}
@@ -145,31 +145,31 @@ export const ExperienceCard = ({
               className="overflow-hidden"
             >
               <div className="px-4 sm:px-6 pb-4 sm:pb-6 space-y-6">
-                <div className="h-px w-full bg-slate-200 dark:bg-neutral-700" />
+                <div className="h-px w-full bg-neutral-200 dark:bg-white/5" />
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
+                    <h4 className="text-xs sm:text-sm font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-2">
                       Descripción
                     </h4>
-                    <p className="text-sm sm:text-base text-slate-600 dark:text-neutral-400 leading-relaxed">
+                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                       {exp.description.details}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-neutral-300 uppercase tracking-wide mb-2">
+                    <h4 className="text-xs sm:text-sm font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wide mb-2">
                       Proyectos
                     </h4>
                     <div className="space-y-6">
                       {exp.description.projects.map((project, index) => (
                         <div
                           key={index}
-                          className="border-l-2 border-slate-100 dark:border-neutral-700 pl-3 sm:pl-4 space-y-4"
+                          className="border-l-2 border-neutral-200 dark:border-white/5 pl-3 sm:pl-4 space-y-4"
                         >
                           {/* Nombre del Proyecto */}
                           <div className="flex items-start gap-3">
-                            <div className="w-2 h-2 mt-2 rounded-full bg-green-500" />
-                            <h5 className="text-sm sm:text-base font-semibold text-slate-800 dark:text-white">
+                              <div className="w-2 h-2 mt-2 rounded-full bg-gold" />
+                            <h5 className="text-sm sm:text-base font-semibold text-void dark:text-white">
                               {project.name}
                             </h5>
                           </div>
@@ -178,7 +178,7 @@ export const ExperienceCard = ({
                           <ul className="ml-5 space-y-2">
                             {project.description.map((desc, i) => (
                               <li key={i} className="flex items-start gap-2">
-                                <p className="text-xs sm:text-sm text-slate-600 dark:text-neutral-400 leading-relaxed">
+                                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                                   {desc}
                                 </p>
                               </li>
@@ -188,14 +188,14 @@ export const ExperienceCard = ({
                           {/* Tecnologías */}
                           <div className="ml-5">
                             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-                              <span className="text-xs font-medium text-slate-500 dark:text-neutral-400">
+                              <span className="text-xs font-medium text-neutral-500 dark:text-neutral-500">
                                 Tecnologías:
                               </span>
                               <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, j) => (
                                   <div
                                     key={j}
-                                    className="w-8 h-8 flex items-center justify-center rounded-full border border-slate-300 dark:border-neutral-600 bg-slate-200 dark:bg-neutral-800 hover:-translate-y-1 transition-transform"
+                                    className="w-8 h-8 flex items-center justify-center rounded-full border border-neutral-300 dark:border-white/10 bg-neutral-100 dark:bg-surface hover:-translate-y-1 transition-transform"
                                     title={tech.name}
                                   >
                                     <img
@@ -213,7 +213,7 @@ export const ExperienceCard = ({
                           {project.hadWebSite && (
                             <div className="ml-5">
                               <a href={project.webSite} target="_blank">
-                                <button className="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:scale-105 transition-transform shadow-sm">
+                                <button className="mt-2 inline-flex items-center gap-2 bg-gold text-void py-2 px-4 rounded-lg text-xs sm:text-sm font-semibold hover:bg-gold/90 transition-colors shadow-sm">
                                   <ExternalLink className="w-4 h-4" />
                                   Ver
                                 </button>

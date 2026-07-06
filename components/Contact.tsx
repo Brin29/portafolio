@@ -45,33 +45,34 @@ export const Contact = () => {
   }
 
   return (
-    <div id="contacto" className="m-auto md:w-[80vw] w-[85vw] mt-[100px] md:mt-[100px] min-h-scree flex items-center justify-center px-4 py-10">
+    <div id="contacto" className="m-auto md:w-[80vw] w-[85vw] mt-[100px] md:mt-[100px] flex items-center justify-center px-4 py-10">
       <div className="w-full max-w-7xl mx-auto">
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-void dark:text-white mb-4">Contáctame</h2>
+          <p className="text-neutral-600 dark:text-neutral-400 text-center max-w-lg leading-relaxed">
+            ¿Tienes un proyecto en mente? Estoy abierto a nuevas oportunidades y desafíos.
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Formulario */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-full max-w-lg shadow-2xl bg-white dark:bg-black border border-neutral-50 dark:border-neutral-800 text-white rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-2">Contáctame</h2>
-              <p className="text-sm text-neutral-800 dark:text-neutral-300 mb-6">
-                ¿Tienes una idea, proyecto o propuesta de trabajo? Estoy disponible para trabajar en nuevos desafíos.
-                Completa el formulario y me pondré en contacto contigo lo antes posible.
-              </p>
+            <div className="w-full max-w-lg bg-white dark:bg-deep border border-neutral-100 dark:border-white/5 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-xl font-bold text-void dark:text-white mb-6">Envíame un mensaje</h3>
 
               {submitStatus === "success" && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
-                  <p className="text-green-400 text-sm">¡Mensaje enviado con éxito! Te responderé pronto.</p>
+                <div className="mb-6 p-4 bg-gold/10 border border-gold/30 rounded-lg">
+                  <p className="text-gold text-sm font-medium">¡Mensaje enviado con éxito! Te responderé pronto.</p>
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
-                  <p className="text-red-400 text-sm">Algo salió mal. Por favor, intenta de nuevo.</p>
+                <div className="mb-6 p-4 bg-ember/10 border border-ember/30 rounded-lg">
+                  <p className="text-ember text-sm font-medium">Algo salió mal. Por favor, intenta de nuevo.</p>
                 </div>
               )}
 
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <LabelInputContainer>
-                  <Label htmlFor="name" className="text-neutral-800 dark:text-neutral-200">
+                  <Label htmlFor="name" className="text-void dark:text-neutral-300 text-sm font-medium">
                     Nombre
                   </Label>
                   <Input
@@ -80,28 +81,26 @@ export const Contact = () => {
                     placeholder="Tu nombre"
                     type="text"
                     required
-                    className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
+                    className="bg-neutral-100 dark:bg-surface border-neutral-200 dark:border-white/10 text-void dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-500"
                   />
                 </LabelInputContainer>
 
                 <LabelInputContainer>
-                  <Label htmlFor="email" className="text-neutral-800 dark:text-neutral-200">
+                  <Label htmlFor="email" className="text-void dark:text-neutral-300 text-sm font-medium">
                     Email
                   </Label>
                   <Input
                     id="email"
                     name="email"
-                    placeholder="Tu email"
+                    placeholder="tu@email.com"
                     type="email"
                     required
-                    className="bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white dark:placeholder:text-neutral-500
-                    placeholder:text-neutral-600 
-                    focus:border-neutral-500"
+                    className="bg-neutral-100 dark:bg-surface border-neutral-200 dark:border-white/10 text-void dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-500"
                   />
                 </LabelInputContainer>
 
                 <LabelInputContainer>
-                  <Label htmlFor="message" className="text-neutral-800 dark:text-neutral-200">
+                  <Label htmlFor="message" className="text-void dark:text-neutral-300 text-sm font-medium">
                     Mensaje
                   </Label>
                   <Textarea
@@ -109,27 +108,21 @@ export const Contact = () => {
                     name="message"
                     rows={5}
                     required
-                    className="resize-none bg-stone-200 dark:bg-neutral-900 border-neutral-700 text-black dark:text-white placeholder:text-neutral-600 dark:placeholder:text-neutral-500 focus:border-neutral-500"
+                    className="resize-none bg-neutral-100 dark:bg-surface border-neutral-200 dark:border-white/10 text-void dark:text-white placeholder:text-neutral-500 dark:placeholder:text-neutral-500"
                     placeholder="Cuéntame sobre tu proyecto..."
                   />
                 </LabelInputContainer>
 
                 <button
-                  className="cursor-pointer group/btn relative block h-12 w-full rounded-lg bg-gradient-to-br from-[#d5f2ff] to-[#81abde] dark:from-neutral-900 dark:to-neutral-700 font-medium dark:text-white text-black shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="cursor-pointer relative block h-12 w-full rounded-lg bg-gold text-void font-semibold shadow-lg hover:bg-gold/90 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   type="submit"
                   disabled={isSubmitting}
                 >
                   <span className="relative z-10">{isSubmitting ? "Enviando..." : "Enviar mensaje"} &rarr;</span>
-                  <BottomGradient />
+                  <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
                 </button>
 
-                <div className="relative">
-                  <div className="absolute inset-0 flex items-center">
-                    <div className="w-full border-t border-neutral-700" />
-                  </div>
-                </div>
-
-                <p className="text-xs text-neutral-400 text-center">
+                <p className="text-xs text-neutral-500 dark:text-neutral-500 text-center">
                   Suelo responder en menos de 24 horas. ¡Estoy atento a tu mensaje!
                 </p>
               </form>
@@ -145,15 +138,6 @@ export const Contact = () => {
         </div>
       </div>
     </div>
-  )
-}
-
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
-      <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
-    </>
   )
 }
 
