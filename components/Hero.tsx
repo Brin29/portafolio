@@ -43,7 +43,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mt-4 max-w-lg text-base text-neutral-500 dark:text-neutral-500 leading-relaxed"
         >
-          Creo soluciones escalables con React, TypeScript y Django.
+          Creo soluciones escalables con React, TypeScript y Node.js.
           Apasionado por el código limpio y la buena arquitectura.
         </motion.p>
 
