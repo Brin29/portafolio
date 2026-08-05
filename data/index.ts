@@ -85,7 +85,7 @@ export const experience = [
     {
     id: 1,
     date: "2025 - 2026",
-    position: "Full Stack Developer",
+    position: "Frontend Developer",
     description: {
       details:
       "Desarrollo completo de un proyecto, incluyendo las pruebas de calidad y el despliegue a producción de un sistema de parqueaderos",
