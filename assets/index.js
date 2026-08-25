@@ -21,7 +21,6 @@ import finance from "./projects/finance.png"
 import devpulse from "./projects/devpulse.png"
 import petsName from "./projects/pets_name.png";
 import urlShorten from "./projects/urlShorten.webp";
-import webSocket from "./projects/webSocket.webp"; 
 import detector from "./projects/detector.png"
 import redis from "./redis.svg"
 import nextJs from "./nextjs.svg"
@@ -45,4 +44,4 @@ import linkedinClearMode from "./contact/linkedin-clearmode.svg"
 import mui from "./MUI.svg"
 import azure from "./azure.svg"
 
-export { finance, azure, devpulse, fastify, node, nest, mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, webSocket, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
+export { finance, azure, devpulse, fastify, node, nest, mui, angular, githubClearMode, githubDarkMode, gmailClearMode, gmailDarkMode, linkedinClearMode, linkedinDarkMode, aws, docker, firebase, graphql, css, html, javascript, typescript, nextJs, colab, matbloptlip, python, ultratycs, django, roboflow, fastapi, git, petsName, urlShorten, detector, github, mysql, postgresql, postman, react, solana, n8n, springboot, tailwind, vue, redis };
