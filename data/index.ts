@@ -244,7 +244,7 @@ export const projects = [
   {
     id: 1,
     title: "Finance",
-    des: "Aplicación para el registro y visualización de finanzas personales: ingresos, gastos, categorías y resúmenes gráficos. En Next.js con React 19, comunicado con una API en Fastify y base de datos en MongoDB",
+    des:  "Aplicación para el registro y visualización de finanzas personales: ingresos, gastos, categorías y resúmenes gráficos. En Next.js con React 19, comunicado con una API en Fastify y base de datos en MongoDB, el Frontend está desplegado con Vercel y el backend en Railway.",
     img: finance.src,
     iconLists: [nextJs.src, typescript.src,  node.src, fastify.src, postgresql.src, git.src, github.src],
     link: "https://personal-finance-tracker-sepia-rho.vercel.app/",
