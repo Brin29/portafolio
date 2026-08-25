@@ -37,7 +37,8 @@ import {
   devpulse,
   node,
   fastify,
-  azure
+  azure,
+  finance
 } from "../assets";
 
 export const navItems = [
@@ -85,7 +86,7 @@ export const experience = [
     {
     id: 1,
     date: "2025 - 2026",
-    position: "Frontend Developer",
+    position: "Full stack Developer",
     description: {
       details:
       "Desarrollo completo de un proyecto, incluyendo las pruebas de calidad y el despliegue a producción de un sistema de parqueaderos",
@@ -245,14 +246,22 @@ export const experienceFreelancer = [
 export const projects = [
   {
     id: 1,
+    title: "Finance",
+    des: "Aplicación para el registro y visualización de finanzas personales: ingresos, gastos, categorías y resúmenes gráficos. En Next.js con React 19, comunicado con una API en Fastify y base de datos en MongoDB",
+    img: finance.src,
+    iconLists: [nextJs.src, typescript.src,  node.src, fastify.src, postgresql.src, git.src, github.src],
+    link: "https://personal-finance-tracker-sepia-rho.vercel.app/",
+  },
+  {
+    id: 2,
     title: "DevPulse",
     des: "DevPulse es una plataforma de gestión de proyectos, tareas e incidentes diseñada para equipos de desarrollo de software. Su objetivo es centralizar la planificación, seguimiento y colaboración de equipos técnicos mediante una experiencia moderna inspirada en herramientas como Jira, Linear y GitHub.",
     img: devpulse.src,
     iconLists: [react.src, typescript.src, node.src, fastify.src, git.src, github.src],
-    link: "https://dev-pulse-front.vercel.app/",
+    link: "https://github.com/Brin29/DevPulse",
   },
   {
-    id: 2,
+    id: 3,
     title: "Generador de Nombres para mascotas",
     des: "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas. El usuario ingresa características como tipo o personalidad, y recibe sugerencias personalizadas con ayuda de IA generativa.",
     img: petsName.src,
@@ -260,20 +269,12 @@ export const projects = [
     link: "https://github.com/Brin29/pets-name",
   },
   {
-    id: 3,
+    id: 4,
     title: "Acortador de URL's",
     des: "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis. Las URLs acortadas se almacenan en caché con Redis, lo cual reduce las peticiones externas y mejora el rendimiento. Permite crear y recuperar enlaces de forma rápida y eficiente.",
     img: urlShorten.src,
     iconLists: [angular.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
     link: "https://github.com/Brin29/Acortador-de-Url-s",
-  },
-  {
-    id: 4,
-    title: "Mensajes en tiempo real",
-    des: "Aplicación de mensajería construida con WebSockets, Spring Boot y Redis. Permite a los usuarios comunicarse en tiempo real mediante un sistema escalable que utiliza pub/sub para manejar eventos distribuidos y mantener las conversaciones activas.",
-    img: webSocket.src,
-    iconLists: [angular.src, springboot.src, mysql.src, git.src, github.src],
-    link: "https://github.com/Brin29/web-socket",
   },
 ];
 

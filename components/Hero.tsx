@@ -34,7 +34,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
           className="mt-6 text-lg sm:text-xl text-neutral-600 dark:text-neutral-400"
         >
-          Frontend Developer <span className="text-neutral-400 dark:text-neutral-600 mx-2">·</span> Colombia
+          Full Stack Developer <span className="text-neutral-400 dark:text-neutral-600 mx-2">·</span> Colombia
         </motion.p>
 
         <motion.p
@@ -43,7 +43,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="mt-4 max-w-lg text-base text-neutral-500 dark:text-neutral-500 leading-relaxed"
         >
-          Creo soluciones escalables con React, TypeScript y Next.js.
+          Creo soluciones escalables con React, Next.js y Node.js.
           Apasionado por el código limpio y la buena arquitectura.
         </motion.p>
 
