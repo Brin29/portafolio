@@ -34,7 +34,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
           className="mt-6 text-lg sm:text-xl text-neutral-600 dark:text-neutral-400"
         >
-          Full Stack Developer <span className="text-neutral-400 dark:text-neutral-600 mx-2">·</span> Colombia
+          Frontend Developer <span className="text-neutral-400 dark:text-neutral-600 mx-2">·</span> Colombia
         </motion.p>
 
         <motion.p

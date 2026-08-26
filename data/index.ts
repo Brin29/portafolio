@@ -35,58 +35,81 @@ import {
   node,
   fastify,
   azure,
-  finance
+  finance,
 } from "../assets";
 
 export const navItems = [
   {
     name: "Sobre mi",
     link: "#sobre_mi",
-    icon: "inicio"
+    icon: "inicio",
   },
   {
     name: "Experiencia",
     link: "#experiencia",
-    icon: "experiencia"
+    icon: "experiencia",
   },
   {
     name: "Proyectos",
     link: "#proyectos",
-    icon: "proyectos"
+    icon: "proyectos",
   },
   {
     name: "Habilidades",
     link: "#habilidades",
-    icon: "habilidades"
+    icon: "habilidades",
   },
   {
     name: "Contacto",
     link: "#contacto",
-    icon: "contacto"
+    icon: "contacto",
   },
 ];
 
 export const contactDarkMode = [
-  { icon: gmailDarkMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
-  { icon: githubDarkMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinDarkMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breinerdev"}
-]
+  {
+    icon: gmailDarkMode.src,
+    alt: "Gmail",
+    link: "mailto:breinerstevendev@gmail.com",
+  },
+  {
+    icon: githubDarkMode.src,
+    alt: "Github",
+    link: "https://github.com/Brin29",
+  },
+  {
+    icon: linkedinDarkMode.src,
+    alt: "Linkedin",
+    link: "https://www.linkedin.com/in/breinerdev",
+  },
+];
 
 export const contactClearMode = [
-  { icon: gmailClearMode.src, alt: "Gmail", link: "mailto:breinerstevendev@gmail.com"},
-  { icon: githubClearMode.src, alt: "Github", link: "https://github.com/Brin29"},
-  { icon: linkedinClearMode.src, alt: "Linkedin", link: "https://www.linkedin.com/in/breinerdev"}
-]
-
+  {
+    icon: gmailClearMode.src,
+    alt: "Gmail",
+    link: "mailto:breinerstevendev@gmail.com",
+  },
+  {
+    icon: githubClearMode.src,
+    alt: "Github",
+    link: "https://github.com/Brin29",
+  },
+  {
+    icon: linkedinClearMode.src,
+    alt: "Linkedin",
+    link: "https://www.linkedin.com/in/breinerdev",
+  },
+];
 
 export const experience = [
-    {
+  {
     id: 1,
     date: "2025 - 2026",
-    position: "Full stack Developer",
+    position: "Frontend Developer",
     description: {
       details:
-      "Desarrollo completo de un proyecto, incluyendo las pruebas de calidad y el despliegue a producción de un sistema de parqueaderos",
+        "Desarrollo completo de un proyecto, incluyendo las pruebas de calidad y el despliegue a producción de un sistema de parqueaderos",
       projects: [
         {
           name: "Ivolucion Latam",
@@ -94,19 +117,20 @@ export const experience = [
             "Implementar y mantener el frontend utilizando React, TypeScript y Docker, garantizando la estabilidad y escalabilidad del software",
 
             "Desplegar la aplicación en Azure, asegurando un proceso de liberación eficiente y sin interrupciones",
-            
+
             "Apoyar el desarrollo del frontend, garantizando una interfaz de usuario intuitiva y eficiente",
           ],
           hadWebSite: true,
           webSite: "https://ivolucion.com/",
           technologies: [
-            { name: "Angular", icon: angular.src },
+            { name: "React", icon: react.src },
+            { name: "Next.js", icon: nextJs.src },
             { name: "MUI", icon: mui.src },
             { name: "TypeScript", icon: typescript.src },
             { name: "Docker", icon: docker.src },
             { name: "Git", icon: git.src },
             { name: "Github", icon: github.src },
-            { name: "Postman", icon: postman.src }
+            { name: "Postman", icon: postman.src },
           ],
         },
       ],
@@ -132,14 +156,14 @@ export const experience = [
           hadWebSite: true,
           webSite: "https://contaflow.nativoweb.com/login",
           technologies: [
-            { name: "Nest.js", icon: nest.src },
-            { name: "Angular", icon: angular.src },
+            { name: "Next.js", icon: nextJs.src },
+            { name: "React", icon: react.src },
             { name: "N8n", icon: n8n.src },
             { name: "MySQL", icon: mysql.src },
             { name: "Tailwind CSS", icon: tailwind.src },
             { name: "Git", icon: git.src },
             { name: "Github", icon: github.src },
-            { name: "Postman", icon: postman.src }
+            { name: "Postman", icon: postman.src },
           ],
         },
         {
@@ -182,7 +206,6 @@ export const experience = [
       ],
     },
   },
-  
 ];
 
 export const experienceFreelancer = [
@@ -239,14 +262,21 @@ export const experienceFreelancer = [
   },
 ];
 
-
 export const projects = [
   {
     id: 1,
     title: "Finance",
-    des:  "Aplicación para el registro y visualización de finanzas personales: ingresos, gastos, categorías y resúmenes gráficos. En Next.js con React 19, comunicado con una API en Fastify y base de datos en MongoDB, el Frontend está desplegado con Vercel y el backend en Railway.",
+    des: "Aplicación para el registro y visualización de finanzas personales: ingresos, gastos, categorías y resúmenes gráficos. En Next.js con React 19, comunicado con una API en Fastify y base de datos en MongoDB, el Frontend está desplegado con Vercel y el backend en Railway.",
     img: finance.src,
-    iconLists: [nextJs.src, typescript.src,  node.src, fastify.src, postgresql.src, git.src, github.src],
+    iconLists: [
+      nextJs.src,
+      typescript.src,
+      node.src,
+      fastify.src,
+      postgresql.src,
+      git.src,
+      github.src,
+    ],
     link: "https://personal-finance-tracker-sepia-rho.vercel.app/",
   },
   {
@@ -254,7 +284,14 @@ export const projects = [
     title: "DevPulse",
     des: "DevPulse es una plataforma de gestión de proyectos, tareas e incidentes diseñada para equipos de desarrollo de software. Su objetivo es centralizar la planificación, seguimiento y colaboración de equipos técnicos mediante una experiencia moderna inspirada en herramientas como Jira, Linear y GitHub.",
     img: devpulse.src,
-    iconLists: [react.src, typescript.src, node.src, fastify.src, git.src, github.src],
+    iconLists: [
+      react.src,
+      typescript.src,
+      node.src,
+      fastify.src,
+      git.src,
+      github.src,
+    ],
     link: "https://github.com/Brin29/DevPulse",
   },
   {
@@ -262,7 +299,15 @@ export const projects = [
     title: "Generador de Nombres para mascotas",
     des: "Aplicación creada con flujos automatizados en n8n e inteligencia artificial de Gemini para generar nombres únicos para mascotas. El usuario ingresa características como tipo o personalidad, y recibe sugerencias personalizadas con ayuda de IA generativa.",
     img: petsName.src,
-    iconLists: [vue.src, n8n.src, django.src, mysql.src, git.src, github.src, postman.src],
+    iconLists: [
+      vue.src,
+      n8n.src,
+      django.src,
+      mysql.src,
+      git.src,
+      github.src,
+      postman.src,
+    ],
     link: "https://github.com/Brin29/pets-name",
   },
   {
@@ -270,29 +315,37 @@ export const projects = [
     title: "Acortador de URL's",
     des: "Sistema para acortar enlaces utilizando la API de Bitly, Spring Boot y Redis. Las URLs acortadas se almacenan en caché con Redis, lo cual reduce las peticiones externas y mejora el rendimiento. Permite crear y recuperar enlaces de forma rápida y eficiente.",
     img: urlShorten.src,
-    iconLists: [angular.src, tailwind.src, springboot.src, mysql.src, redis.src, git.src, github.src],
+    iconLists: [
+      angular.src,
+      tailwind.src,
+      springboot.src,
+      mysql.src,
+      redis.src,
+      git.src,
+      github.src,
+    ],
     link: "https://github.com/Brin29/Acortador-de-Url-s",
   },
 ];
 
-  export const frontendSkills = [
-    { name: "React", image: react.src, },
-    { name: "Next.js", image: nextJs.src, },
-    { name: "TypeScript", image: typescript.src, },
-    { name: "JavaScript", image: javascript.src, },
-    { name: "HTML", image: html.src, },
-    { name: "CSS", image: css.src, },
-    { name: "Tailwind", image: tailwind.src, },
-    { name: "Material UI", image: mui.src }
-  ]
-  
-  export const backendSkills = [
-    { name: "Django", image: django.src, },
-    { name: "Python", image: python.src, },
-    { name: "Node.js", image: node.src },
-    { name: "PostgreSQL", image: postgresql.src, },
-    { name: "MySQL", image: mysql.src, },
-    { name: "Docker", image: docker.src, },
-    { name: "Graphql", image: graphql.src, },
-    { name: "Azure", image: azure.src }
-  ]
+export const frontendSkills = [
+  { name: "React", image: react.src },
+  { name: "Next.js", image: nextJs.src },
+  { name: "TypeScript", image: typescript.src },
+  { name: "JavaScript", image: javascript.src },
+  { name: "HTML", image: html.src },
+  { name: "CSS", image: css.src },
+  { name: "Tailwind", image: tailwind.src },
+  { name: "Material UI", image: mui.src },
+];
+
+export const backendSkills = [
+  { name: "Django", image: django.src },
+  { name: "Python", image: python.src },
+  { name: "Node.js", image: node.src },
+  { name: "PostgreSQL", image: postgresql.src },
+  { name: "MySQL", image: mysql.src },
+  { name: "Docker", image: docker.src },
+  { name: "Graphql", image: graphql.src },
+  { name: "Azure", image: azure.src },
+];
